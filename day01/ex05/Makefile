@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/09/07 16:35:46 by amouhtal          #+#    #+#              #
-#    Updated: 2021/09/09 14:45:26 by amouhtal         ###   ########.fr        #
+#    Created: 2021/09/09 15:05:07 by amouhtal          #+#    #+#              #
+#    Updated: 2021/09/09 17:39:34 by amouhtal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = brain
+NAME = karen
 CC = g++
 FLAGS = -Wall -Wextra -Werror
-SRCS = main.cpp 
+SRCS = Karen.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 %.o:%.cpp %.hpp

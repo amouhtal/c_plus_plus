@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Karen.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/09 12:20:07 by amouhtal          #+#    #+#             */
+/*   Updated: 2021/09/09 12:20:07 by amouhtal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Karen.hpp"
 
 void Karen::debug( void )
@@ -27,7 +39,6 @@ void Karen::complain(std::string level)
 
     typedef void (Karen::*Actions)();
     Actions actions[4] = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error};
-    Actions tr;
     std::string forms[4] = {"debug", "info", "warning", "error"};
     while (i < 4)
     {

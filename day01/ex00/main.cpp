@@ -12,12 +12,10 @@
 
 #include "Zombie.hpp"
 
-void Zombie::announce( void ) const
-{
-    std::cout << this->name << " BraiiiiiiinnnzzzZ..."<< std::endl;
-}
-
 int main()
 {
-  randomChump("zombie");
+	randomChump("zombie");
+	randomChump("zombie2");
+	randomChump("zombie3");
+	return (0);
 }

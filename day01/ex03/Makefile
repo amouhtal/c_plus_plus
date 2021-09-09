@@ -1,19 +1,19 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    MAKEFILE                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/09/07 16:35:46 by amouhtal          #+#    #+#              #
-#    Updated: 2021/09/09 14:45:26 by amouhtal         ###   ########.fr        #
+#    Created: 2021/09/07 16:35:51 by amouhtal          #+#    #+#              #
+#    Updated: 2021/09/09 15:03:34 by amouhtal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = brain
+NAME = unnecessary_violence
 CC = g++
 FLAGS = -Wall -Wextra -Werror
-SRCS = main.cpp 
+SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 %.o:%.cpp %.hpp

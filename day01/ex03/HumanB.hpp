@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/07 16:36:19 by amouhtal          #+#    #+#             */
+/*   Updated: 2021/09/07 16:36:19 by amouhtal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef __HUMAN_B__HPP__
 #define __HUMAN_B__HPP__
 
@@ -15,4 +27,5 @@ class HumanB
 		void setWeapon(Weapon &Weapon);
 		void attack(void) const;
 };
+
 #endif

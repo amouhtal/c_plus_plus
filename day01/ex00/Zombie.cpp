@@ -24,7 +24,7 @@ Zombie::Zombie()
 
 Zombie::~Zombie()
 {
-    std::cout << "[MESSAGE :]" << this->name << std::endl;
+    std::cout << "destructor " << this->name << std::endl;
     return ;
 }
 std::string Zombie::getZombie()
@@ -32,3 +32,7 @@ std::string Zombie::getZombie()
     return this->name;
 }
 
+void Zombie::announce( void ) const
+{
+    std::cout << this->name << " BraiiiiiiinnnzzzZ..."<< std::endl;
+}

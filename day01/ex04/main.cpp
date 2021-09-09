@@ -7,7 +7,6 @@ void replace(std::string filename, std::string s1, std::string s2)
     int first_occurence;
     int start;
     std::string buff;
-    std::string str;
     std::ifstream ifs(filename);
     start = 0;
     if (ifs.fail())
@@ -26,14 +25,7 @@ void replace(std::string filename, std::string s1, std::string s2)
     {
         start = 0;
         while ((first_occurence = buff.find(s1)) != std::string::npos)
-        {
-            str = buff.substr(0, first_occurence) + s2 + buff[first_occurence + s1.length()];
-            // while ((first_occurence + start) <  first_occurence + s2.length())
-            // {
-            //     buff[first_occurence + start] = s2[start];
-            //     start++;
-            // }
-        }
+            buff = buff.substr(0, first_occurence) + s2 + buff.substr(first_occurence + s1.length(), buff.length());
         ofs << buff;
         ofs << std::endl;
     }

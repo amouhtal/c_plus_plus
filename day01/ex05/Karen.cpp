@@ -1,4 +1,16 @@
-#include "Karen.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Karen.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/09 12:19:47 by amouhtal          #+#    #+#             */
+/*   Updated: 2021/09/09 12:19:47 by amouhtal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+# include "Karen.hpp"
 
 void Karen::debug( void )
 {
@@ -23,18 +35,17 @@ void Karen::error( void )
 void Karen::complain(std::string level)
 {
     int i;
-    i = 0;
 
-    typedef void (Karen::*Actions)();
-    Actions actions[4] = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error};
-    Actions tr;
-    std::string forms[4] = {"debug", "info", "warning", "error"};
-    while (forms[i] != level)
+    i = 0;
+    typedef void (Karen::*Act)();
+    Act actions[4] = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error};
+    std::string forms[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+    while (i < 4)
     {
         if (forms[i] == level)
         {
             (this->*(actions[i]))();
-            break;
+            break ;
         }
         i++;
     }

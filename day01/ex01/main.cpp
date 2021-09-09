@@ -25,11 +25,16 @@ int main()
 
     N = 8;
     i = 0;
-    zombie = zombieHorde(N, "test");
-    while (i < N)
-    {
-      zombie[i].announce();
-      i++;
-    }
-    delete [] zombie;
+
+	zombie = zombieHorde(N, "zombie");
+	if (zombie)
+	{
+		while (i < N)
+		{
+			zombie[i].announce();
+			i++;
+		}
+		delete [] zombie;
+	}
+    return (0);
 }
