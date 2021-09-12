@@ -4,11 +4,15 @@
 
 void replace(std::string filename, std::string s1, std::string s2)
 {
-    int first_occurence;
-    int start;
     std::string buff;
     std::ifstream ifs(filename);
-    start = 0;
+    size_t first_occurence;
+
+    if (s1 == s2)
+    {
+        std::cerr << "[Error!] same strings s1 & s2 ! " << std::endl;
+        return ;
+    }
     if (ifs.fail())
     {
         std::cerr << "[Error!] file :" << filename << std::endl;
@@ -23,7 +27,6 @@ void replace(std::string filename, std::string s1, std::string s2)
     }
     while (std::getline(ifs, buff))
     {
-        start = 0;
         while ((first_occurence = buff.find(s1)) != std::string::npos)
             buff = buff.substr(0, first_occurence) + s2 + buff.substr(first_occurence + s1.length(), buff.length());
         ofs << buff;

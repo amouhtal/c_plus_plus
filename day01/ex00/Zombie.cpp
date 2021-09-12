@@ -35,4 +35,8 @@ std::string Zombie::getZombie()
 void Zombie::announce( void ) const
 {
     std::cout << this->name << " BraiiiiiiinnnzzzZ..."<< std::endl;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> day01

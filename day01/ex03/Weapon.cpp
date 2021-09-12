@@ -26,4 +26,3 @@ Weapon::Weapon(std::string type)
 {
     this->setType(type);
 }
-
