@@ -2,5 +2,5 @@
 
 int main()
 {
-    ClapTrap instance("");
+    ClapTrap instance("b");
 }
