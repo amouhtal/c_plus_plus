@@ -2,7 +2,7 @@
 
 DiamondTrap::DiamondTrap()
 {
-    
+    std::cout << "Diamond trap called" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(std::string name)
@@ -13,8 +13,4 @@ DiamondTrap::DiamondTrap(std::string name)
     this->Energy_points = ScavTrap::Energy_points;
     this->Attack_damage = FragTrap::Attack_damage;
 
-    std::cout << this->Name << std::endl;
-    std::cout << this->Hitpoints << std::endl;
-    std::cout << this->Energy_points << std::endl;
-    std::cout << this->Attack_damage << std::endl;
 }

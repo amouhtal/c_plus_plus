@@ -22,7 +22,6 @@ FragTrap::FragTrap(std::string Name)
     this->Attack_damage = 30;
 }
 
-
 void FragTrap::highFivesGuys(void)
 {
     std::cout << "positive high fives" << std::endl;

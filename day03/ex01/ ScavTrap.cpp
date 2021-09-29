@@ -3,11 +3,9 @@
 ScavTrap::ScavTrap()
 {
     std::cout << "ScavTrap Default Constructor" << std::endl;
-}
-
-ScavTrap::~ScavTrap()
-{
-    std::cout << "ScavTrap Destructor" << std::endl;
+    this->Hitpoints = 100;
+    this->Energy_points = 50;
+    this->Attack_damage = 20;
 }
 
 ScavTrap::ScavTrap(std::string Name)
@@ -43,3 +41,7 @@ void ScavTrap::guardGate()
     std::cout << "ScavTrap have enterred in Gate keeper mode" << std::endl;
 }
 
+ScavTrap::~ScavTrap()
+{
+    std::cout << "ScavTrap Destructor" << std::endl;
+}

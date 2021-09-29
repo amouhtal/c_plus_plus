@@ -3,11 +3,9 @@
 ClapTrap::ClapTrap()
 {
     std::cout << "ClapTrap Default constructor" << std::endl;
-}
-
-ClapTrap::~ClapTrap()
-{
-    std::cout << "ClapTrap Deconstructor" << std::endl;
+    this->Hitpoints = 10;
+    this->Energy_points = 10;
+    this->Attack_damage = 0;
 }
 
 ClapTrap::ClapTrap(std::string Name)
@@ -45,10 +43,16 @@ void ClapTrap::attack(std::string const & target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-    std::cout << "name " << Name << " amount " << amount << std::endl;
+    std::cout << Name << " take damage amount :" << amount << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    std::cout << "ClapTrap " << Name << " takedamage " << "amount " << amount <<std::endl;
+    std::cout << "ClapTrap " << Name << " Repaired " << "amount :" << amount <<std::endl;
+
+}
+
+ClapTrap::~ClapTrap()
+{
+    std::cout << "ClapTrap Destructor" << std::endl;
 }

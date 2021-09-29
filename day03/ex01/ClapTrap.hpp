@@ -4,6 +4,8 @@
 
 #include <iostream>
 
+#define GREEN   "\033[32m"
+#define BOLDGREEN   "\033[1m\033[32m"
 class ClapTrap
 {
     protected :

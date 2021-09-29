@@ -5,11 +5,6 @@ ScavTrap::ScavTrap()
     std::cout << "ScavTrap Default Constructor" << std::endl;
 }
 
-ScavTrap::~ScavTrap()
-{
-    std::cout << "ScavTrap Destructor" << std::endl;
-}
-
 ScavTrap::ScavTrap(std::string Name)
 {
     std::cout << "ScavTrap paramitrise constructor" << std::endl;
@@ -43,3 +38,7 @@ void ScavTrap::guardGate()
     std::cout << "ScavTrap have enterred in Gate keeper mode" << std::endl;
 }
 
+ScavTrap::~ScavTrap()
+{
+    std::cout << "ScavTrap Destructor" << std::endl;
+}

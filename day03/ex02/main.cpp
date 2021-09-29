@@ -1,7 +1,10 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
-    ScavTrap instance1("instance1");
-    ScavTrap instance2 = instance1;
+    FragTrap instance1;
+    FragTrap instance2("fragtrap");
+    instance1(instance2);
+
+    instance1.highFivesGuys();
 }
