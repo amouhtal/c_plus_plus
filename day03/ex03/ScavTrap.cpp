@@ -8,11 +8,6 @@ ScavTrap::ScavTrap()
     // this->Attack_damage = 20;
 }
 
-ScavTrap::~ScavTrap()
-{
-    std::cout << "ScavTrap Destructor" << std::endl;
-}
-
 ScavTrap::ScavTrap(std::string Name)
 {
     std::cout << "ScavTrap paramitrise constructor" << std::endl;
@@ -44,5 +39,10 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &rhs)
 void ScavTrap::guardGate()
 {
     std::cout << "ScavTrap have enterred in Gate keeper mode" << std::endl;
+}
+
+ScavTrap::~ScavTrap()
+{
+    std::cout << "ScavTrap Destructor" << std::endl;
 }
 

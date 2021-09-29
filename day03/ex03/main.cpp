@@ -2,13 +2,32 @@
 
 int main()
 {
-    DiamondTrap instance1("instance1");
+    // ClapTrap C_instance0;
+    // ClapTrap C_instance1("claptrap");
+    // ClapTrap C_instance2(C_instance1);
+    // C_instance2.attack("target");
+    // C_instance2.takeDamage(30);
+    // C_instance2.beRepaired(20);
 
-    // std::cout << instance1.Name << std::endl;
-    // std::cout << instance1.Hitpoints << std::endl;
-    // std::cout << instance1.Energy_points << std::endl;
-    // std::cout << instance1.Attack_damage << std::endl;    // std::cout << instance1.Name << std::endl;
-    // std::cout << instance1.Hitpoints << std::endl;
-    // std::cout << instance1.Energy_points << std::endl;
-    // std::cout << instance1.Attack_damage << std::endl;
+    // std::cout << "------------------------------------------" << std::endl;
+
+    // ScavTrap S_instance0;
+    // ScavTrap S_instance1("scavtrap");
+    // ScavTrap S_instance2(S_instance1);
+    // S_instance2.guardGate();
+
+    // std::cout << "------------------------------------------" << std::endl;
+    
+    // FragTrap instance0;
+    // FragTrap instance1("fragtrap");
+    // FragTrap instance2(instance1);
+    // instance2.highFivesGuys();
+
+    
+    std::cout << "------------------------------------------" << std::endl;
+    DiamondTrap instance0;
+    DiamondTrap instance1("diamondtrap");
+    DiamondTrap diamondtrap(instance1);
+    diamondtrap.whoAmI();
+
 }
