@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/30 17:57:44 by amouhtal          #+#    #+#             */
+/*   Updated: 2021/09/30 17:57:45 by amouhtal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "DiamondTrap.hpp"
 
 int main()
@@ -25,9 +37,10 @@ int main()
 
     
     std::cout << "------------------------------------------" << std::endl;
-    DiamondTrap instance0;
-    DiamondTrap instance1("diamondtrap");
-    DiamondTrap diamondtrap(instance1);
+    // DiamondTrap instance0;
+    DiamondTrap D_instance1("diamondtrap");
+    DiamondTrap diamondtrap(D_instance1);
     diamondtrap.whoAmI();
-
+    // std::string target = "Scavtrap";
+    // D_instance1.attack(target);
 }

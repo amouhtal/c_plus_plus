@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/30 17:57:55 by amouhtal          #+#    #+#             */
+/*   Updated: 2021/09/30 17:57:59 by amouhtal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap()
@@ -34,6 +46,11 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &rhs)
         this->Attack_damage = rhs.Attack_damage;
     }
     return (*this);
+}
+
+void ScavTrap::attack(const std::string &target)
+{
+    std::cout << "ScavTrap " << Name << " attack " << target << " ,causing " << Attack_damage << " points of damage !" << std::endl;
 }
 
 void ScavTrap::guardGate()
