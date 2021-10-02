@@ -6,7 +6,7 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 17:55:20 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/09/30 18:14:51 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/01 10:35:36 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,8 @@ int main()
     ScavTrap S_instance0;
     ScavTrap S_instance1("scavtrap");
     ScavTrap S_instance2(S_instance1);
+    S_instance2.attack("target");
+    S_instance2.takeDamage(50);
+    S_instance2.beRepaired(40);
     S_instance2.guardGate();
 }

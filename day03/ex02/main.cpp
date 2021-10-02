@@ -6,7 +6,7 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 17:56:25 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/09/30 18:15:10 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/01 11:41:32 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,15 @@
 
 int main()
 {
+    FragTrap instance0;
+    FragTrap instance1("fragtrap");
+    FragTrap instance2(instance1);
+    instance2.attack("target");
+    instance2.takeDamage(50);
+    instance2.beRepaired(40);
+    instance2.highFivesGuys();
+
+    // std::cout << "------------------------------------------" << std::endl;
     // ClapTrap C_instance0;
     // ClapTrap C_instance1("claptrap");
     // ClapTrap C_instance2(C_instance1);
@@ -29,11 +38,5 @@ int main()
     // ScavTrap S_instance2(S_instance1);
     // S_instance2.guardGate();
 
-    // std::cout << "------------------------------------------" << std::endl;
-    
-    FragTrap instance0;
-    FragTrap instance1("fragtrap");
-    FragTrap instance2(instance1);
-    instance2.highFivesGuys();
     
 }
