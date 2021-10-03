@@ -25,4 +25,5 @@ int main()
     std::cout << c->getType() << " " << std::endl;
     c->makeSound();
     test->makeSound();
+	return (0);
 }

@@ -23,16 +23,14 @@ int main()
 
 	log("---------->Deep Copy<----------");
 
-	Cat *c1 = new Cat();
-	Cat *c2 = new Cat();
-	c1->setbrain('p');
-	c2 = c1;
-	c1->getbrain();
-	c2->getbrain();
-	c2->setbrain('j');
-	c1->getbrain();
-	c2->getbrain();
-	//std::cout << c1.getType() << std::endl;
+	Dog dog;
+	{
+		Dog tmp = dog;
+	};
+	// Cat c1 = Cat();
+	// Cat c2 = Cat(c1);
+	// std::cout << c1.getType() << std::endl;
 	//delete j;//should not create a leak
 	//delete i;
+	return (0);
 }
