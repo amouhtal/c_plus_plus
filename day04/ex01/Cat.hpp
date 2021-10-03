@@ -1,6 +1,7 @@
 # ifndef _CAT_HPP_
 #define _CAT_HPP_
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal
 {
@@ -12,6 +13,8 @@ class Cat : public Animal
         Cat &operator=(const Cat &other);
         virtual ~Cat();
         std::string getType() const;
+        void setbrain(char c);
+        void getbrain();
         void makeSound( void)  const;
 };
 

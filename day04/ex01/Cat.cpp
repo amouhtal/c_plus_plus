@@ -15,14 +15,17 @@ Cat::Cat(const Cat &other)
 
 Cat &Cat::operator=(const Cat &other)
 {
-	this->type = other.type;
+	log("==============================");
+	this->type = "Cat";
+	this->brain = new Brain(*(other.brain));
+	// *brain = *other.brain;
 	return *this;
 }
 
 Cat::~Cat()
 {
-	log("Cat deconstructor");
-	delete [] brain;
+	log("Cat Destructor");
+	delete(brain);
 }
 
 void Cat::makeSound() const
@@ -35,3 +38,16 @@ std::string Cat::getType() const
 	return this->type;
 }
 
+void Cat::setbrain(char c)
+{
+	brain->setBrain(c);
+}
+
+void Cat::getbrain()
+{
+	for (size_t i = 0; i < 100; i++)
+	{
+		std::cout << this->brain->getBrain();
+	}
+	std::cout << std::endl ;
+}

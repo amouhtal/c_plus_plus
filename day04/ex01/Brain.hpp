@@ -2,6 +2,7 @@
 #define _BRAIN_HPP_
 
 #include <iostream>
+#include "Animal.hpp"
 
 class Brain
 {
@@ -9,6 +10,8 @@ class Brain
 	public:
 		Brain();
 		Brain(const Brain &other);
+		void setBrain(char c);
+		std::string getBrain( void ) const;
 		Brain &operator=(const Brain &rhs);
 		~Brain();
 };
