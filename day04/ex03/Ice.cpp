@@ -17,6 +17,17 @@ Ice &Ice::operator=(const Ice &rhs)
 	this->type = rhs.type;
 }
 
+AMateria* AMateria::clone() const
+{
+	AMateria *Mat = new Ice();
+	return (Mat);
+}
+
+void Ice::use(ICharacter &ch)
+{
+	std::cout << "Ice shoots an ice bolt at " << ch.getName() << std::endl;
+}
+
 Ice::~Ice()
 {
 	log("Ice Destructor");

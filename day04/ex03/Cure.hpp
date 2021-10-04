@@ -9,6 +9,8 @@ class Cure : public AMateria
 		Cure();
 		virtual ~Cure();
 		void use(ICharacter&);
+		AMateria* clone() const;
+		virtual AMateria* clone() const;
 };
 
 #endif

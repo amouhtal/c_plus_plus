@@ -8,7 +8,13 @@ Cure::Cure()
 
 void Cure::use(ICharacter &ch)
 {
-	std::cout << "Ice shoots an ice bolt at " << ch.getName() << std::endl;
+	std::cout << "Cure heals " << ch.getName() << "wounds" << std::endl;
+}
+
+AMateria* AMateria::clone() const
+{
+	AMateria *Mat = new Cure();
+	return (Mat);
 }
 
 Cure::~Cure()
