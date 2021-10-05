@@ -17,6 +17,15 @@ AMateria* Cure::clone() const
 	return (Mat);
 }
 
+Cure::Cure(const Cure &other)
+{
+	*this = other;
+}
+
+Cure &Cure::operator=(const Cure &other)
+{
+	this->type = other.type;
+}
 
 Cure::~Cure()
 {

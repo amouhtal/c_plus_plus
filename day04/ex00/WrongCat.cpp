@@ -6,7 +6,7 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 18:00:04 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/02 18:07:08 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/05 15:31:44 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ WrongCat::WrongCat(const WrongCat &other)
 	*this = other;
 }
 
-WrongCat WrongCat::operator=(const WrongCat &rhs)
+WrongCat &WrongCat::operator=(const WrongCat &rhs)
 {
 	log("WrongCat Operator D'assignation");
 	this->type = rhs.type;

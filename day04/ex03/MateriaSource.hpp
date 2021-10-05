@@ -12,7 +12,9 @@ private:
 
 public:
 	MateriaSource();
-	~MateriaSource();
+	MateriaSource(const MateriaSource &other);
+	MateriaSource &operator=(const MateriaSource &rhs);
+	virtual ~MateriaSource();
 
 	virtual void learnMateria(AMateria *);
 	virtual AMateria *createMateria(std::string const &type);

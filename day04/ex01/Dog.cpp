@@ -3,9 +3,9 @@
 
 Dog::Dog()
 {
-	log("Dog  default constructor");
 	this->type = "Dog";
 	brain = new Brain();
+	log("Dog  default constructor");
 }
 
 Dog::Dog(const Dog &other)

@@ -1,7 +1,6 @@
-#include "Animal.hpp"
+
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
 int main()
@@ -19,11 +18,11 @@ int main()
     delete(i);
 
     log("\n--------->WrongAnimal<-----------\n");
-    const WrongAnimal *test = new WrongAnimal();
+    // const WrongAnimal *test = new WrongAnimal();
     const WrongAnimal *c = new WrongCat();
 
     std::cout << c->getType() << " " << std::endl;
-    c->makeSound();
-    test->makeSound();
+    // c->makeSound();
+    // test->makeSound();
 	return (0);
 }

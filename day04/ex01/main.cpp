@@ -27,7 +27,17 @@ int main()
 		Dog tmp = dog;
 	};
 	// Cat c1 = Cat();
+	// c1.setbrain('e');
 	// Cat c2 = Cat(c1);
+
+
+	//  c1.getbrain();
+	//  c2.getbrain();
+
+	// c2.setbrain('s');
+
+	// c1.getbrain();
+	//  c2.getbrain();
 	// std::cout << c1.getType() << std::endl;
 	//delete j;//should not create a leak
 	//delete i;

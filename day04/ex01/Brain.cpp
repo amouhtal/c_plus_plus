@@ -38,5 +38,5 @@ std::string Brain::getBrain( void ) const
 
 Brain::~Brain()
 {
-	log("Destructor Called");
+	log("Brain Destructor Called");
 }

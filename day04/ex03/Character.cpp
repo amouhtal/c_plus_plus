@@ -32,7 +32,7 @@ void Character::unequip(int idx)
 	if (idx <= Materia_count)
 	{
 		inventory[idx] = NULL;
-		for (size_t i = idx; i < Materia_count - 1; i++)
+		for (int i = idx; i < Materia_count - 1; i++)
 		{
 			inventory[i] = inventory[i + 1];
 		}
@@ -47,9 +47,23 @@ std::string const & Character::getName() const
 
 Character::Character(std::string name)
 {
-	;
+	this->Name = name;
 }
 
+Character::Character(const Character &other)
+{
+	*this = other;
+}
+
+Character &Character::operator=(const Character &rhs)
+{
+	this->Name = rhs.Name;
+	Materia_count = rhs.Materia_count;
+	for (size_t i = 0; i < rhs.Materia_count; i++)
+	{
+		inventory[i] = rhs.inventory[i]->clone();
+	}
+}
 
 Character::~Character()
 {
