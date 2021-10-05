@@ -15,9 +15,10 @@ Ice::Ice(const Ice &other)
 Ice &Ice::operator=(const Ice &rhs)
 {
 	this->type = rhs.type;
+	return (*this);
 }
 
-AMateria* AMateria::clone() const
+AMateria* Ice::clone() const
 {
 	AMateria *Mat = new Ice();
 	return (Mat);

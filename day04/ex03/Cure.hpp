@@ -8,8 +8,8 @@ class Cure : public AMateria
 	public :
 		Cure();
 		virtual ~Cure();
+		std::string const &getType() const;
 		void use(ICharacter&);
-		AMateria* clone() const;
 		virtual AMateria* clone() const;
 };
 

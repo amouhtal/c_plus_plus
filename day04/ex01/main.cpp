@@ -10,7 +10,6 @@ int main()
 	// count = 4;
 
 	// Animal *animals[count];
-
 	// for (int i = 0; i < count / 2; i++)
 	// {
 	// 	animals[i] = new Cat();

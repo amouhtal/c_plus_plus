@@ -1,10 +1,11 @@
-#ifndef _AMATERIA_HPP_
-#define _AMATERIA_HPP_
+#ifndef AMATERIA_HPP
+#define AMATERIA_HPP
 
 #include <iostream>
+# include "Character.hpp"
+# include "ICharacter.hpp"
 
 #define log(x) std::cout << x << std::endl;
-#include "Character.hpp"
 
 class AMateria
 {
@@ -12,8 +13,8 @@ protected:
 	std::string type;
 
 public:
-	AMateria(std::string const &type);
 	AMateria();
+	AMateria(std::string const &type);
 	AMateria(const AMateria &other);
 	AMateria &operator=(const AMateria &rhs);
 

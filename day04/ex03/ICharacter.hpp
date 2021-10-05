@@ -1,8 +1,9 @@
 #ifndef _ICHARACTER_HPP
 #define _ICHARACTER_HPP
 
-#include <iostream>
 #include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {

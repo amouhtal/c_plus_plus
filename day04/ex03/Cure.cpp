@@ -11,11 +11,12 @@ void Cure::use(ICharacter &ch)
 	std::cout << "Cure heals " << ch.getName() << "wounds" << std::endl;
 }
 
-AMateria* AMateria::clone() const
+AMateria* Cure::clone() const
 {
 	AMateria *Mat = new Cure();
 	return (Mat);
 }
+
 
 Cure::~Cure()
 {
