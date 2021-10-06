@@ -22,7 +22,7 @@ Dog &Dog::operator=(const Dog &other)
 }
 Dog::~Dog()
 {
-	log("Dog deconstructor");
+	log("Dog destructor");
 	delete(brain);
 }
 
@@ -34,4 +34,18 @@ void Dog::makeSound() const
 std::string Dog::getType() const
 {
 	return this->type;
+}
+
+void Dog::setbrain(char c)
+{
+	brain->setBrain(c);
+}
+
+void Dog::getbrain()
+{
+	for (size_t i = 0; i < 100; i++)
+	{
+		std::cout << this->brain->getBrain();
+	}
+	std::cout << std::endl;
 }

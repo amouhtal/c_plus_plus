@@ -22,7 +22,7 @@ int main()
     const WrongAnimal *c = new WrongCat();
 
     std::cout << c->getType() << " " << std::endl;
-    // c->makeSound();
+    c->makeSound();
     // test->makeSound();
 	return (0);
 }

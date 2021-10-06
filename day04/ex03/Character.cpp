@@ -8,7 +8,7 @@ Character::Character()
 
 void Character::equip(AMateria *m)
 {
-	if (Materia_count < 3)
+	if (Materia_count < 4)
 	{
 		inventory[Materia_count++] = m;
 	}
@@ -20,7 +20,7 @@ void Character::equip(AMateria *m)
 
 void Character::use(int idx, ICharacter &target)
 {
-	if (Materia_count < 3)
+	if (idx > -1 && idx < 4 && idx < Materia_count)
 		inventory[idx]->use(target);
 	else
 		log("index out inventory");
@@ -59,10 +59,11 @@ Character &Character::operator=(const Character &rhs)
 {
 	this->Name = rhs.Name;
 	Materia_count = rhs.Materia_count;
-	for (size_t i = 0; i < rhs.Materia_count; i++)
+	for (int i = 0; i < rhs.Materia_count; i++)
 	{
 		inventory[i] = rhs.inventory[i]->clone();
 	}
+	return (*this);
 }
 
 Character::~Character()

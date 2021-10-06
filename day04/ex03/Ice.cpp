@@ -2,13 +2,13 @@
 
 Ice::Ice()
 {
-	log("Ice Default constructor");
+	// log("Ice Default constructor");
 	type = "ice";
 }
 
 Ice::Ice(const Ice &other)
 {
-	log("Ice Default constructor");
+	// log("Ice Default constructor");
 	*this = other;
 }
 
@@ -26,10 +26,10 @@ AMateria* Ice::clone() const
 
 void Ice::use(ICharacter &ch)
 {
-	std::cout << "Ice shoots an ice bolt at " << ch.getName() << std::endl;
+	std::cout << "shoots an ice bolt at " << ch.getName() << std::endl;
 }
 
 Ice::~Ice()
 {
-	log("Ice Destructor");
+	// log("Ice Destructor");
 }

@@ -3,7 +3,7 @@
 
 Dog::Dog()
 {
-	log("Dog  default constructor");
+	// log("Dog  default constructor");
 	this->type = "Dog";
 	brain = new Brain();
 }
@@ -15,11 +15,12 @@ Dog::Dog(const Dog &other)
 
 Dog &Dog::operator=(const Dog &other)
 {
-	log("Dog Assignation Operator");
+	// log("Dog Assignation Operator");
 	this->type = other.type;
 	this->brain = new Brain(*(other.brain));
 	return *this;
 }
+
 Dog::~Dog()
 {
 	log("Dog deconstructor");

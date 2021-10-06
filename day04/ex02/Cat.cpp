@@ -3,7 +3,7 @@
 
 Cat::Cat()
 {
-	log("Cat  default constructor");
+	// log("Cat  default constructor");
 	this->type = "Cat";
 	this->brain = new Brain();
 }
@@ -15,10 +15,10 @@ Cat::Cat(const Cat &other)
 
 Cat &Cat::operator=(const Cat &other)
 {
-	log("Cat Assignation Operator");
+	// log("Cat Assignation Operator");
 	this->type = "Cat";
-	this->brain = new Brain(*(other.brain));
-	// *brain = *other.brain;
+	this->brain = new Brain();
+	*brain = *other.brain;
 	return *this;
 }
 

@@ -6,7 +6,7 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 13:18:42 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/02 17:34:03 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/06 11:45:54 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Animal::Animal()
 {
 	log("Animal  default constructor");
+	type = "Animal";
 }
 
 Animal::Animal(const Animal &other)

@@ -31,6 +31,7 @@ MateriaSource &MateriaSource::operator=(const MateriaSource &rhs)
 	this->Materia_count = rhs.Materia_count;
 	for (size_t i = 0; i < Materia_count; i++)
 		this->inventory[i] = rhs.inventory[i]->clone();
+	return (*this);
 	
 }
 

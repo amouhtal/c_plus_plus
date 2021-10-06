@@ -2,13 +2,13 @@
 
 Cure::Cure()
 {
-	log("Cure Default Constructor");
+	// log("Cure Default Constructor");
 	type = "cure";
 }
 
 void Cure::use(ICharacter &ch)
 {
-	std::cout << "Cure heals " << ch.getName() << "wounds" << std::endl;
+	std::cout << "heals " << ch.getName() << " wounds" << std::endl;
 }
 
 AMateria* Cure::clone() const
@@ -25,9 +25,10 @@ Cure::Cure(const Cure &other)
 Cure &Cure::operator=(const Cure &other)
 {
 	this->type = other.type;
+	return (*this);
 }
 
 Cure::~Cure()
 {
-	log("Cure Destructor");
+	// log("Cure Destructor");
 }

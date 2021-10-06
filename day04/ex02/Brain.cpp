@@ -3,18 +3,18 @@
 
 Brain::Brain()
 {
-	log("Brain Default Constructor");
+	// log("Brain Default Constructor");
 }
 
 Brain::Brain(const Brain &other)
 {
-	log("Brain Copy Constructor");
+	// log("Brain Copy Constructor");
 	*this = other;
 }
 
 Brain &Brain::operator=(const Brain &rhs)
 {
-	log("Brain Assignation operator");
+	// log("Brain Assignation operator");
 	for (size_t i = 0; i < 100; i++)
 	{
 		this->ideas[i] = rhs.ideas[i];
@@ -38,5 +38,5 @@ std::string Brain::getBrain( void ) const
 
 Brain::~Brain()
 {
-	log("Destructor Called");
+	// log("Destructor Called");
 }
