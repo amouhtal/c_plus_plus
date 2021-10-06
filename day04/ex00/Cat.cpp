@@ -13,13 +13,13 @@ Cat::Cat(const Cat &other)
 
 Cat &Cat::operator=(const Cat &other)
 {
-	this->type = other.type;
+	(void)other;
 	return *this;
 }
 
 Cat::~Cat()
 {
-	log("Cat deconstructor");
+	log("Cat destructor");
 }
 
 void Cat::makeSound() const

@@ -10,20 +10,23 @@ Dog::Dog()
 
 Dog::Dog(const Dog &other)
 {
-	*this = other;
+	this->type = "Dog";
+	this->brain = new Brain(*other.brain);
 }
 
 Dog &Dog::operator=(const Dog &other)
 {
 	log("Dog Assignation Operator");
-	this->type = other.type;
-	this->brain = new Brain(*(other.brain));
+	if (this == &other)
+		return *this;
+	this->type = "Dat";
+	*brain = *other.brain;
 	return *this;
 }
 Dog::~Dog()
 {
 	log("Dog destructor");
-	delete(brain);
+	delete (brain);
 }
 
 void Dog::makeSound() const
@@ -36,16 +39,17 @@ std::string Dog::getType() const
 	return this->type;
 }
 
-void Dog::setbrain(char c)
+void Dog::setbrain(std::string c)
 {
 	brain->setBrain(c);
 }
 
 void Dog::getbrain()
 {
-	for (size_t i = 0; i < 100; i++)
+	std::string const *ideas = this->brain->getBrain();
+	for (size_t i = 0; i < 99; i++)
 	{
-		std::cout << this->brain->getBrain();
+		std::cout << ideas[i] << ", ";
 	}
-	std::cout << std::endl;
+	std::cout << ideas[99] << std::endl;
 }

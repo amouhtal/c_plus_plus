@@ -6,7 +6,7 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 13:13:42 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/06 11:57:57 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/06 16:51:59 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Dog : public Animal
         Dog &operator=(const Dog &other);
         virtual ~Dog();
         std::string getType() const;
-        void setbrain(char c);
+        void setbrain(std::string c);
         void getbrain();
         void makeSound( void)  const;
 };

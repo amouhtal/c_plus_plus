@@ -32,3 +32,8 @@ void AMateria::use(ICharacter &target)
 {
 	(void)target;
 }
+
+AMateria::~AMateria()
+{
+	;
+}

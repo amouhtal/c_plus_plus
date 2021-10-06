@@ -6,7 +6,7 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 13:18:42 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/06 11:45:54 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/06 16:20:46 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ Animal::Animal(const Animal &other)
 
 Animal &Animal::operator=(const Animal &other)
 {
+	if (this == &other)
+		return *this;
 	this->type = other.type;
 	return *this;
 }
@@ -37,7 +39,7 @@ std::string Animal::getType() const
 
 Animal::~Animal()
 {
-	log("Animal deconstructor");
+	log("Animal destructor");
 }
 
 void Animal::makeSound() const

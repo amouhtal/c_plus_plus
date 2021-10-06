@@ -13,12 +13,12 @@ Dog::Dog(const Dog &other)
 
 Dog &Dog::operator=(const Dog &other)
 {
-	this->type = other.type;
+	(void)other;
 	return *this;
 }
 Dog::~Dog()
 {
-	log("Dog deconstructor");
+	log("Dog destructor");
 }
 
 void Dog::makeSound() const

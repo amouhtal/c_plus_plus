@@ -15,6 +15,8 @@ Brain::Brain(const Brain &other)
 Brain &Brain::operator=(const Brain &rhs)
 {
 	log("Brain Assignation operator");
+	if(this == &rhs)
+		return *this;
 	for (size_t i = 0; i < 100; i++)
 	{
 		this->ideas[i] = rhs.ideas[i];
@@ -22,18 +24,20 @@ Brain &Brain::operator=(const Brain &rhs)
 	return (*this);
 }
 
-void Brain::setBrain(char c)
+void Brain::setBrain(std::string c)
 {
 	// log("Brain Paramitrise Constructor");
+	std::string str;
 	for (size_t i = 0; i < 100; i++)
 	{
-		ideas[i] = c;
+		str = c + std::to_string(i);
+		ideas[i] = str;
 	}
 }
 
-std::string Brain::getBrain( void ) const
+std::string const *Brain::getBrain( void ) const
 {
-	return (*this->ideas);
+	return (this->ideas);
 }
 
 Brain::~Brain()
