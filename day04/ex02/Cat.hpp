@@ -13,9 +13,10 @@ class Cat : public Animal
         Cat &operator=(const Cat &other);
         virtual ~Cat();
         std::string getType() const;
-        void setbrain(char c);
+        void setbrain(std::string c);
         void getbrain();
         void makeSound( void)  const;
 };
+
 
 #endif

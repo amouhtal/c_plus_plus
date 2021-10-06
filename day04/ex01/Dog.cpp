@@ -3,9 +3,9 @@
 
 Dog::Dog()
 {
+	log("Dog  default constructor");
 	this->type = "Dog";
 	brain = new Brain();
-	log("Dog  default constructor");
 }
 
 Dog::Dog(const Dog &other)
@@ -41,12 +41,12 @@ std::string Dog::getType() const
 
 void Dog::setbrain(std::string c)
 {
-	brain->setBrain(c);
+	brain->setIdeas(c);
 }
 
 void Dog::getbrain()
 {
-	std::string const *ideas = this->brain->getBrain();
+	std::string const *ideas = this->brain->getIdeas();
 	for (size_t i = 0; i < 99; i++)
 	{
 		std::cout << ideas[i] << ", ";

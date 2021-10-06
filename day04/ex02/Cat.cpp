@@ -3,21 +3,23 @@
 
 Cat::Cat()
 {
-	// log("Cat  default constructor");
+	log("Cat  default constructor");
 	this->type = "Cat";
 	this->brain = new Brain();
 }
 
 Cat::Cat(const Cat &other)
 {
-	*this = other;
+	this->type = "Cat";
+	this->brain = new Brain(*other.brain);
 }
 
 Cat &Cat::operator=(const Cat &other)
 {
-	// log("Cat Assignation Operator");
+	log("Cat Assignation Operator");
+	if (this == &other)
+		return *this;
 	this->type = "Cat";
-	this->brain = new Brain();
 	*brain = *other.brain;
 	return *this;
 }
@@ -38,16 +40,17 @@ std::string Cat::getType() const
 	return this->type;
 }
 
-void Cat::setbrain(char c)
+void Cat::setbrain(std::string c)
 {
-	brain->setBrain(c);
+	brain->setIdeas(c);
 }
 
 void Cat::getbrain()
 {
-	for (size_t i = 0; i < 100; i++)
+	std::string const *ideas = this->brain->getIdeas();
+	for (size_t i = 0; i < 99; i++)
 	{
-		std::cout << this->brain->getBrain();
+		std::cout << ideas[i] << ", ";
 	}
-	std::cout << std::endl;
+	std::cout << ideas[99] << std::endl;
 }

@@ -24,7 +24,7 @@ Brain &Brain::operator=(const Brain &rhs)
 	return (*this);
 }
 
-void Brain::setBrain(std::string c)
+void Brain::setIdeas(std::string c)
 {
 	// log("Brain Paramitrise Constructor");
 	std::string str;
@@ -35,7 +35,7 @@ void Brain::setBrain(std::string c)
 	}
 }
 
-std::string const *Brain::getBrain( void ) const
+std::string const *Brain::getIdeas( void ) const
 {
 	return (this->ideas);
 }

@@ -14,8 +14,8 @@ public:
 	Brain(const Brain &other);
 	~Brain();
 
-	void setBrain(std::string c);
-	std::string const *getBrain(void) const;
+	void setIdeas(std::string c);
+	std::string const *getIdeas(void) const;
 };
 
 #endif

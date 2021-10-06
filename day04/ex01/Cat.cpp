@@ -42,12 +42,12 @@ std::string Cat::getType() const
 
 void Cat::setbrain(std::string c)
 {
-	brain->setBrain(c);
+	brain->setIdeas(c);
 }
 
 void Cat::getbrain()
 {
-	std::string const *ideas = this->brain->getBrain();
+	std::string const *ideas = this->brain->getIdeas();
 	for (size_t i = 0; i < 99; i++)
 	{
 		std::cout << ideas[i] << ", ";
