@@ -29,7 +29,7 @@ int main()
 	tmp = src->createMateria("cure");
 	bob->equip(tmp);
 
-	bob->unequip(1);
+	bob->unequip(3);
 
 	me->use(0, *bob);
 	me->use(1, *bob);
@@ -37,7 +37,7 @@ int main()
 	bob->use(0, *me);
 	bob->use(1, *me);
 	bob->use(2, *me);
-	bob->use(4, *me);
+	bob->use(3, *me);
 	delete bob;
 	delete me;
 	delete src;

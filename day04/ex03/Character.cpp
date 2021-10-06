@@ -16,6 +16,8 @@ void Character::equip(AMateria *m)
 	{
 		log("full inventory");
 	}
+	// if(Materia_count == 4)
+	// 	Materia_count--;
 }
 
 void Character::use(int idx, ICharacter &target)
@@ -28,11 +30,10 @@ void Character::use(int idx, ICharacter &target)
 
 void Character::unequip(int idx)
 {
-	// [ 0 ] [ 1 ] [ 2 ] [ 3 ]
-	if (idx <= Materia_count)
+	if (idx > -1 && idx < 4 && idx < Materia_count)
 	{
 		inventory[idx] = NULL;
-		for (int i = idx; i < Materia_count - 1; i++)
+		for (int i = idx ; i < Materia_count - 1; i++)
 		{
 			inventory[i] = inventory[i + 1];
 		}
