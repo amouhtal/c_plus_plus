@@ -16,7 +16,7 @@ AMateria *MateriaSource::createMateria(std::string const &type)
 	for (size_t i = 0; i < Materia_count; i++)
 	{
 		if (inventory[i]->getType() == type)
-			return (inventory[i]);
+			return (inventory[i]->clone());
 	}
 	return (0);
 }
