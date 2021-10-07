@@ -19,10 +19,11 @@ Dog &Dog::operator=(const Dog &other)
 	log("Dog Assignation Operator");
 	if (this == &other)
 		return *this;
-	this->type = "Dat";
+	this->type = "Dog";
 	*brain = *other.brain;
 	return *this;
 }
+
 Dog::~Dog()
 {
 	log("Dog destructor");

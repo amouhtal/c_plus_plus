@@ -8,6 +8,7 @@ Cat::Cat()
 
 Cat::Cat(const Cat &other)
 {
+	log("Cat  copy constructor");
 	*this = other;
 }
 

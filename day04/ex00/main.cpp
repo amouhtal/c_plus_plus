@@ -18,11 +18,13 @@ int main()
     delete(i);
 
     log("\n--------->WrongAnimal<-----------\n");
-    // const WrongAnimal *test = new WrongAnimal();
+    const WrongAnimal *test = new WrongAnimal();
     const WrongAnimal *c = new WrongCat();
 
     std::cout << c->getType() << " " << std::endl;
+    test->makeSound();
     c->makeSound();
-    // test->makeSound();
+    delete (test);
+    delete (c);
 	return (0);
 }

@@ -18,5 +18,4 @@ class Cat : public Animal
         void makeSound( void)  const;
 };
 
-
 #endif

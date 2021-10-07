@@ -6,7 +6,7 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 17:47:47 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/05 15:53:05 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/07 11:16:34 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ WrongAnimal::WrongAnimal()
 
 WrongAnimal::WrongAnimal(const WrongAnimal &other)
 {
-	log("WrongAnimal Copy Constructor");
+	// log("WrongAnimal Copy Constructor");
 	*this = other;
 }
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &rhs)
 {
-	log("WrongAnimal Assignation operator");
+	// log("WrongAnimal Assignation operator");
 	this->type = rhs.type;
 	return (*this);
 }

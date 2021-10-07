@@ -6,7 +6,7 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 13:18:42 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/05 18:04:33 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/07 14:02:30 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ std::string Animal::getType() const
 
 Animal::~Animal()
 {
-	log("Animal deconstructor");
+	log("Animal destructor");
 }
 
 void Animal::makeSound() const
 {
-	log("some wierd sound");
+	log("some weird sound");
 }

@@ -6,12 +6,15 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 13:13:42 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/06 18:49:27 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/07 14:14:54 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # ifndef _DOG_HPP_
 #define _DOG_HPP_
+
+#include "Animal.hpp"
+#include "Brain.hpp"
 
 #include "Animal.hpp"
 #include "Brain.hpp"

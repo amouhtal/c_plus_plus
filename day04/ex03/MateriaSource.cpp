@@ -8,7 +8,7 @@ MateriaSource::MateriaSource()
 void MateriaSource::learnMateria(AMateria *ma)
 {
 	if (Materia_count >= 0 || Materia_count < 4)
-		inventory[Materia_count++] = ma->clone();
+		inventory[Materia_count++] = ma;
 }
 
 AMateria *MateriaSource::createMateria(std::string const &type)

@@ -10,6 +10,7 @@ Dog::Dog()
 
 Dog::Dog(const Dog &other)
 {
+	log("Dog  copy constructor");
 	this->type = "Dog";
 	this->brain = new Brain(*other.brain);
 }
@@ -19,10 +20,11 @@ Dog &Dog::operator=(const Dog &other)
 	log("Dog Assignation Operator");
 	if (this == &other)
 		return *this;
-	this->type = "Dat";
+	this->type = "Dog";
 	*brain = *other.brain;
 	return *this;
 }
+
 Dog::~Dog()
 {
 	log("Dog destructor");

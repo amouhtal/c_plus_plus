@@ -24,31 +24,34 @@ int main()
 	delete i;
 
 	log("---------->Deep Copy Cat<----------");
+	{ 
+		Cat c1;
+		c1.setbrain("c");
+		Cat c2(c1);
 
-	Cat c1 = Cat();
-	c1.setbrain("c");
-	Cat c2 = Cat(c1);
+		std::cout << c1.getType() << std::endl;
+		c1.getbrain();
+		c2.getbrain();
 
-	std::cout << c1.getType() << std::endl;
-	c1.getbrain();
-	c2.getbrain();
+		c2.setbrain("s");
 
-	c2.setbrain("s");
-
-	c1.getbrain();
-	c2.getbrain();
+		c1.getbrain();
+		c2.getbrain();
+	}
 	log("---------->Deep Copy Dog<----------");
-	Dog d1 = Dog();
-	d1.setbrain("d");
-	Dog d2 = Dog(d1);
+	{
+		Dog d1;
+		d1.setbrain("d");
+		Dog d2(d1);
 
-	std::cout << d1.getType() << std::endl;
-	d1.getbrain();
-	d2.getbrain();
+		std::cout << d1.getType() << std::endl;
+		d1.getbrain();
+		d2.getbrain();
 
-	d2.setbrain("f");
+		d2.setbrain("f");
 
-	d1.getbrain();
-	d2.getbrain();
+		d1.getbrain();
+		d2.getbrain();
+	}
 	return (0);
 }

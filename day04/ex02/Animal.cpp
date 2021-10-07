@@ -6,7 +6,7 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 13:18:42 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/06 12:23:19 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/07 15:38:20 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Animal::Animal()
 {
-	// log("Animal  default constructor");
+	log("Animal  default constructor");
 }
 
 Animal::Animal(const Animal &other)
@@ -36,10 +36,5 @@ std::string Animal::getType() const
 
 Animal::~Animal()
 {
-	// log("Animal deconstructor");
-}
-
-void Animal::makeSound() const
-{
-	// log("some wierd sound");
+	log("Animal deconstructor");
 }

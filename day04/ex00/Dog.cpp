@@ -8,6 +8,7 @@ Dog::Dog()
 
 Dog::Dog(const Dog &other)
 {
+	log("Dog  copy constructor");
 	*this = other;
 }
 
@@ -16,6 +17,7 @@ Dog &Dog::operator=(const Dog &other)
 	(void)other;
 	return *this;
 }
+
 Dog::~Dog()
 {
 	log("Dog destructor");

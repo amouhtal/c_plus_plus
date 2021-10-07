@@ -10,6 +10,7 @@ Cat::Cat()
 
 Cat::Cat(const Cat &other)
 {
+	log("Cat  Copy constructor");
 	this->type = "Cat";
 	this->brain = new Brain(*other.brain);
 }

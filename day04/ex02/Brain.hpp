@@ -12,7 +12,7 @@ public:
 	Brain();
 	Brain &operator=(const Brain &rhs);
 	Brain(const Brain &other);
-	~Brain();
+	virtual ~Brain();
 
 	void setIdeas(std::string c);
 	std::string const *getIdeas(void) const;
