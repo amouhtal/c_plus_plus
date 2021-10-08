@@ -61,6 +61,9 @@
         "unordered_map": "cpp",
         "utility": "cpp",
         "vector": "cpp",
-        "__functional_base_03": "cpp"
+        "__functional_base_03": "cpp",
+        "bit": "cpp",
+        "deque": "cpp",
+        "stack": "cpp"
     }
 }
