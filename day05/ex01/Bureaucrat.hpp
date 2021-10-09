@@ -2,8 +2,13 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
+#include "Form.hpp"
 
 #define log(x) std::cout << x << std::endl
+class Bureaucrat;
+
+class Form;
+
 class Bureaucrat
 {
 private:
@@ -20,6 +25,7 @@ public:
 	int getGrade(void) const;
 	void incGrade();
 	void decGrade();
+	void signForm( Form &form );
 	class GradeTooHighException : public std::exception
 	{
 		virtual const char *what() const throw()

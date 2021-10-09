@@ -9,12 +9,22 @@ public:
 	Name() {}
 	~Name() {}
 	Name(std::string name);
+
 	class Fakename : public std::exception
 	{
-		virtual const char *what() const throw()
-		{
-			return "Fake Name\n";
-		}
+		public :
+			const char *what() const throw()
+			{
+				return "Fake Name\n";
+			}
+	};
+	class Correctname : public std::exception
+	{
+		public :
+			const char *what() const throw()
+			{
+				return "Correct Name\n";
+			}
 	};
 };
 
@@ -22,6 +32,8 @@ Name::Name(std::string name)
 {
 	if (name == "fake")
 		throw Fakename();
+	if (name == "correct")
+		throw Correctname();
 	_name = name;
 }
 
@@ -30,10 +42,11 @@ int main()
 	try
 	{
 		Name t("fake");
-		Name t2("faee");
+		puts("here");
+		Name t2("correct");
 	}
-	catch (const std::exception &e)
+	catch (const std::exception &f)
 	{
-		std::cerr << e.what() << '\n';
+		std::cerr << f.what() << '\n';
 	}
 }

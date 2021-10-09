@@ -1,5 +1,4 @@
 #include "Bureaucrat.hpp"
-
 Bureaucrat::Bureaucrat()
 {
 	;
@@ -58,4 +57,21 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs)
 {
 	this->Grade = rhs.Grade;
 	return *this;
+}
+
+void Bureaucrat::signForm(Form &form )
+{
+	// (void)form;
+	if (form.getSigne() == 0 && this->Grade < form.GetSignGrade())
+	{
+		std::cout << Name << "signs" << form.getName() << std::endl;
+		form.beSigned(*this);
+	}
+	else
+	{
+		if(this->Grade > form.GetSignGrade())
+			std::cout << Name << " cannot sign " << form.getName() << " because Grade is too low" << std::endl;
+		else
+			std::cout << Name << " cannot sign " << form.getName() << " the form is aleardy signed" << std::endl;
+	}
 }
