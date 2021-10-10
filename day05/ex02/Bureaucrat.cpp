@@ -48,18 +48,18 @@ std::ostream &operator<<(std::ostream &out, Bureaucrat &bureaucrat)
 	return out;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &other): Name(other.Name)
+Bureaucrat::Bureaucrat(const Bureaucrat &other) : Name(other.Name)
 {
 	*this = other;
 }
 
-Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs) 
+Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs)
 {
 	this->Grade = rhs.Grade;
 	return *this;
 }
 
-void Bureaucrat::signForm(Form &form )
+void Bureaucrat::signForm(Form &form)
 {
 	try
 	{
