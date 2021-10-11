@@ -37,14 +37,13 @@ void Karen::complain(std::string level)
     int i;
     i = 0;
 
-    typedef void (Karen::*Actions)();
-    Actions actions[4] = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error};
+    void (Karen::*Actions[4])() = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error};
     std::string forms[4] = {"debug", "info", "warning", "error"};
     while (i < 4)
     {
         if (forms[i] == level)
         {
-            (this->*(actions[i]))();
+            (this->*(Actions[i]))();
             break;
         }
         i++;
