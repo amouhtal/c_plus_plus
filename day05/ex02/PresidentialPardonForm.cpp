@@ -1,13 +1,13 @@
 #include "PresidentialPardonForm.hpp"
 
 
-PresidentialPardonForm::PresidentialPardonForm()
+PresidentialPardonForm::PresidentialPardonForm() : Form("", 72, 45)
 {
 	;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(std::string target)
-	:	Form("PresidentialPardonForm", 72, 45), _target(target)
+PresidentialPardonForm::PresidentialPardonForm(std::string target, std::string Name)
+	:	Form(Name, 72, 45), _target(target)
 {
 	;
 }

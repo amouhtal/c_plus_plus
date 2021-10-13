@@ -10,7 +10,7 @@ private:
 	std::string _target;
 public:
 	ShrubberyCreationForm();
-	ShrubberyCreationForm(std::string target);
+	ShrubberyCreationForm(std::string target, std::string Name);
 	~ShrubberyCreationForm();
 	void Action() const;
 	class FileNotOpenExeception : public std::exception

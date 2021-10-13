@@ -3,7 +3,7 @@
 
 class MYError : public std::exception
 {
-	virtual const char *what() const throw()
+	const char *what() const 
 	{
 		return "ERRRRRROR\n";
 	}
@@ -11,7 +11,7 @@ class MYError : public std::exception
 
 int fun() throw()
 {
-	throw MYError();
+	// throw MYError();
 
 	return 1;
 	

@@ -16,15 +16,16 @@ int main()
 	{
 		std::cerr << e.what();
 	}
+
 	try
 	{
 		Bureaucrat school("school", -5);
-
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << e.what();
+		std::cerr << e.what() << std::endl;
 	}
+
 	try
 	{
 		Bureaucrat school("school", 200);

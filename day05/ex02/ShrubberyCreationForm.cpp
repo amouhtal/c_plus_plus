@@ -1,7 +1,12 @@
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
-	: Form("Shrubbery", 145, 137), _target(target)
+ShrubberyCreationForm::ShrubberyCreationForm() : Form("", 145, 137)
+{
+	;
+}
+
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target, std::string Name)
+	: Form(Name, 145, 137), _target(target)
 {
 	;
 }
@@ -32,7 +37,7 @@ void ShrubberyCreationForm::Action() const
 	ofs.close();
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other) : Form(other.getName(), 145, 137)
 {
 	*this = other;
 }
@@ -40,5 +45,5 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other)
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &rhs)
 {
 	this->_target = rhs._target;
-	return *this;
+	return (*this);
 }

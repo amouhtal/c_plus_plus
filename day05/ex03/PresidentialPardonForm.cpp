@@ -6,8 +6,8 @@ PresidentialPardonForm::PresidentialPardonForm()
 	;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(std::string target)
-	:	Form("PresidentialPardonForm", 72, 45), _target(target)
+PresidentialPardonForm::PresidentialPardonForm(std::string target, std::string Name)
+	:	Form(Name, 72, 45), _target(target)
 {
 	;
 }

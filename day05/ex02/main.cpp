@@ -9,21 +9,55 @@ int main()
 	try
 	{
 		Bureaucrat b("ana", 140);
-		Form *n = new ShrubberyCreationForm("home2");
-
+		Form *n = new ShrubberyCreationForm("home", "FormName");
 		b.signForm(*n);
 		b.executeForm(*n);
-
 	}
 	catch (std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
 	}
-	// int i = time(NULL);
 
-	// std::cout << i << std::endl;
-	// b.exectform()
-	// ShrubberyCreationForm i;
-	// std::cout << i.GetSignGrade() << std::endl;
-	// ShrubberyCreationForm f(target);
+	log("-------");
+
+	try
+	{
+		Bureaucrat b("ana", 15);
+		Form *n = new RobotomyRequestForm("Robot", "FormName");
+
+		b.signForm(*n);
+		b.executeForm(*n);
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+	log("-------");
+
+	try
+	{
+		Bureaucrat b("ana", 40);
+		Form *n = new PresidentialPardonForm("president", "FormName");
+
+		b.signForm(*n);
+		b.executeForm(*n);
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	log("-------");
+
+	try
+	{
+		Bureaucrat b("ana", 149);
+		Form *n = new ShrubberyCreationForm("home", "FormName");
+		b.signForm(*n);
+		b.executeForm(*n);
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
 }
