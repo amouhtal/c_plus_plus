@@ -8,7 +8,6 @@ class ShrubberyCreationForm : public Form
 {
 private:
 	std::string _target;
-
 public:
 	ShrubberyCreationForm();
 	ShrubberyCreationForm(std::string target);
@@ -21,9 +20,8 @@ public:
 			return "File Not Create";
 		}
 	};
-	// ShrubberyCreationForm(const ShrubberyCreationForm &);
-	// ShrubberyCreationForm &operator=(const ShrubberyCreationForm &);
-	// void execute(Bureaucrat const &executor) const;
+	ShrubberyCreationForm(const ShrubberyCreationForm &);
+	ShrubberyCreationForm &operator=(const ShrubberyCreationForm &);
 };
 
 #endif

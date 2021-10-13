@@ -3,19 +3,35 @@
 Form * Intern::RobotMyRequest(std::string target)
 {
 	Form *ret = new RobotomyRequestForm(target);
-	std::cout << "hello" <<std::endl;
 	return (ret);
 }
 
+Form * Intern::PresidentialPardon(std::string target)
+{
+	Form *ret = new PresidentialPardonForm(target);
+	return (ret);
+}
+
+Form * Intern::Shrubbery(std::string target)
+{
+	Form *ret = new ShrubberyCreationForm(target);
+	return (ret);
+}
 
 Form *Intern::makeForm(std::string form_name, std::string target)
 {
-	// typedef Form * (Intern::*forms)(std::string);
-	// forms foo[] = {&Intern::RobotMyRequest};
-	// Form foo[](std::string)= {&Intern::RobotMyRequest};
-	// std::string knownForm[3] = {"robotomy request", "cdcd", "cd"};
-	// forms* Func[1] = {&Intern::RobotMyRequest};
-	Form *(Intern::*foo[])(std::string) = {&Intern::RobotMyRequest,};
-	(void)form_name;
-	return ((this->*foo[0])(target));
+	Form *f;
+	typedef Form *(Intern::*Forms)(std::string);
+	Forms forms[3] = {&Intern::RobotMyRequest,&Intern::PresidentialPardon,&Intern::RobotMyRequest};
+	std::string names[3] = {"RobotMy Request", "Presidential Pardon", "Shrubbery Creation"};
+
+	for (size_t i = 0; i < 3; i++)
+	{
+		if (names[i] == form_name)
+			{
+				f = (this->*forms[0])(target);
+				return ((this->*forms[0])(target));
+			}
+	}
+	throw UnknownFormExeception();
 }

@@ -32,12 +32,13 @@ void ShrubberyCreationForm::Action() const
 	ofs.close();
 }
 
-// ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other)
-// {
-// 	*this = other;
-// }
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other)
+{
+	*this = other;
+}
 
-// ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &)
-// {
-// 	return *this;
-// }
+ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &rhs)
+{
+	this->_target = rhs._target;
+	return *this;
+}

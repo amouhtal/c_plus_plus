@@ -1,28 +1,48 @@
-# include "Bureaucrat.hpp"
-# include "Form.hpp"
-# include "ShrubberyCreationForm.hpp"
-# include "RobotomyRequestForm.hpp"
-# include "PresidentialPardonForm.hpp"
-# include "Intern.hpp"
+#include "Bureaucrat.hpp"
+#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
+
 int main()
 {
-	Bureaucrat b("ana", 15);
-	Intern i;
-	Form *r;
+	log ("---->Tests<----");
+	try
+	{
+		Intern ahmed;
+		Form *task;
+		task = ahmed.makeForm("RobotMy Request", "Pardon");
+		log(task->getName());
+		delete task;
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 
-	r = i.makeForm("form","home");
+	try
+	{
+		Intern ahmed;
+		Form *task;
+		task = ahmed.makeForm("Shrubbery Creation", "home");
+		//log(task->GetTarget());
+		delete task;
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 
-	Form *n = new PresidentialPardonForm("home2");
-	b.signForm(*n);
-	b.executeForm(*n);
-	
-	// int i = time(NULL);
-
-
-	// std::cout << i << std::endl;
-	// b.exectform()
-	// ShrubberyCreationForm i;
-	// std::cout << i.GetSignGrade() << std::endl;
-	// ShrubberyCreationForm f(target);
-
+	try
+	{
+		Intern ahmed;
+		Form *task;
+		task = ahmed.makeForm("RobotMyRequest", "error");
+		log(task->getName());
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 }

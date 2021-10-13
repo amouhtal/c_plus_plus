@@ -32,6 +32,11 @@ void ShrubberyCreationForm::Action() const
 	ofs.close();
 }
 
+std::string ShrubberyCreationForm::GetTarget( void ) const
+{
+	return (this->_target);
+}
+
 // ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other)
 // {
 // 	*this = other;

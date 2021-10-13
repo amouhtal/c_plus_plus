@@ -16,7 +16,6 @@ int main()
 	{
 		std::cerr << e.what();
 	}
-
 	try
 	{
 		Bureaucrat school("school", -5);
@@ -26,11 +25,9 @@ int main()
 	{
 		std::cerr << e.what();
 	}
-
 	try
 	{
 		Bureaucrat school("school", 200);
-
 	}
 	catch (const std::exception &e)
 	{

@@ -9,11 +9,11 @@ class RobotomyRequestForm : public Form
 
 public:
 	RobotomyRequestForm();
+	RobotomyRequestForm(Bureaucrat &);
 	RobotomyRequestForm(std::string _target);
 	~RobotomyRequestForm();
 	RobotomyRequestForm(const RobotomyRequestForm &);
 	RobotomyRequestForm &operator=(const RobotomyRequestForm &);
-	RobotomyRequestForm(Bureaucrat &);
 	void Action() const;
 	class FileNotOpenExeception : public std::exception
 	{
