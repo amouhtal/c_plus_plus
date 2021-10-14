@@ -1,6 +1,6 @@
 #include "Form.hpp"
 
-Form::Form() : Name(""), SignGrade(0), ExecuteGrade(0)
+Form::Form() : Name(""), SignGrade(0), ExecuteGrade(0), _Signed(false)
 {
 	if (SignGrade < 1)
 		throw GradeTooHighException();
@@ -8,7 +8,8 @@ Form::Form() : Name(""), SignGrade(0), ExecuteGrade(0)
 		throw GradeTooHighException();
 }
 
-Form::Form(std::string name, int sign_grade, int execute_grade) : Name(name), SignGrade(sign_grade), ExecuteGrade(execute_grade)
+Form::Form(std::string name, int sign_grade, int execute_grade) : Name(name), SignGrade(sign_grade),
+																  ExecuteGrade(execute_grade), _Signed(false)
 {
 	if (SignGrade < 1)
 		throw GradeTooHighException();

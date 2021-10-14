@@ -5,9 +5,14 @@ Bureaucrat::Bureaucrat()
 	;
 }
 
-Bureaucrat::~Bureaucrat()
+const char * Bureaucrat::GradeTooHighException::what() const throw()
 {
-	;
+	return "Grade Too High";
+}
+
+const char * Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return "Grade Too Low";
 }
 
 std::string Bureaucrat::getName(void) const
@@ -58,4 +63,9 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs)
 {
 	this->Grade = rhs.Grade;
 	return *this;
+}
+
+Bureaucrat::~Bureaucrat()
+{
+	;
 }

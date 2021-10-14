@@ -1,33 +1,39 @@
 #include "PresidentialPardonForm.hpp"
 
-
 PresidentialPardonForm::PresidentialPardonForm()
 {
 	;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(std::string target, std::string Name)
-	:	Form(Name, 72, 45), _target(target)
+	: Form(Name, 72, 45), _target(target)
 {
 	;
 }
 
-PresidentialPardonForm::~PresidentialPardonForm()
-{
-	;
-}
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &other)
 {
 	*this = other;
 }
 
-PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm &)
+PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm &rhs)
 {
+	_target = rhs._target;
 	return *this;
+}
+
+const char *PresidentialPardonForm::FileNotOpenExeception::what() const throw()
+{
+	return "File Not Create";
 }
 
 void PresidentialPardonForm::Action() const
 {
 	std::cout << _target << " has been pardoned  by Zafod Beeblebrox" << std::endl;
+}
+
+PresidentialPardonForm::~PresidentialPardonForm()
+{
+	;
 }

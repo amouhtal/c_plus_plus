@@ -1,6 +1,5 @@
 #include "RobotomyRequestForm.hpp"
 
-
 RobotomyRequestForm::RobotomyRequestForm()
 {
 	;
@@ -12,18 +11,14 @@ RobotomyRequestForm::RobotomyRequestForm(std::string target, std::string Name)
 	;
 }
 
-RobotomyRequestForm::~RobotomyRequestForm()
-{
-	;
-}
-
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other)
 {
 	*this = other;
 }
 
-RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &)
+RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &rhs)
 {
+	_target = rhs._target;
 	return *this;
 }
 
@@ -42,4 +37,9 @@ void RobotomyRequestForm::Action() const
 		std::cout << this->_target << " has been failed "  << std::endl;
 
 
+}
+
+RobotomyRequestForm::~RobotomyRequestForm()
+{
+	;
 }

@@ -4,9 +4,14 @@ Bureaucrat::Bureaucrat()
 	;
 }
 
-Bureaucrat::~Bureaucrat()
+const char *Bureaucrat::GradeTooHighException::what() const throw()
 {
-	;
+	return "Grade Too High";
+}
+
+const char *Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return "Grade Too Low";
 }
 
 std::string Bureaucrat::getName(void) const
@@ -70,4 +75,9 @@ void Bureaucrat::signForm(Form &form )
 	{
 		std::cout << Name << " cannot sign " << form.getName() << " " << e.what() << std::endl;
 	}
+}
+
+Bureaucrat::~Bureaucrat()
+{
+	;
 }

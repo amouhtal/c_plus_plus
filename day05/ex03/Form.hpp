@@ -29,24 +29,15 @@ public:
 	virtual void Action() const = 0;
 	class GradeTooHighException : public std::exception
 	{
-		virtual const char *what() const throw()
-		{
-			return "Grade Too High";
-		}
+		virtual const char *what() const throw();
 	};
 	class FormNotSignedException : public std::exception
 	{
-		virtual const char *what() const throw()
-		{
-			return "Form Not Signed";
-		}
+		virtual const char *what() const throw();
 	};
 	class GradeTooLowException : public std::exception
 	{
-		virtual const char *what() const throw()
-		{
-			return "Grade Too Low";
-		}
+		virtual const char *what() const throw();
 	};
 };
 

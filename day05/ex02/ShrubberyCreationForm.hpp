@@ -12,6 +12,8 @@ public:
 	ShrubberyCreationForm();
 	ShrubberyCreationForm(std::string target, std::string Name);
 	~ShrubberyCreationForm();
+	ShrubberyCreationForm(const ShrubberyCreationForm &);
+	ShrubberyCreationForm &operator=(const ShrubberyCreationForm &);
 	void Action() const;
 	class FileNotOpenExeception : public std::exception
 	{
@@ -20,8 +22,6 @@ public:
 			return "File Not Create";
 		}
 	};
-	ShrubberyCreationForm(const ShrubberyCreationForm &);
-	ShrubberyCreationForm &operator=(const ShrubberyCreationForm &);
 };
 
 #endif

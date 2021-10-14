@@ -14,12 +14,13 @@ public:
 	Form *PresidentialPardon(std::string form_name, std::string target);
 	Form *Shrubbery(std::string form_name, std::string target);
 	Form *makeForm(std::string form_name, std::string target);
+	Intern();
+	Intern(const Intern &);
+	Form &operator=(const Form &);
+	~Intern();
 	class UnknownFormExeception : public std::exception
 	{
-		virtual const char *what() const throw()
-		{
-			return "Unknown Name Form";
-		}
+		virtual const char *what() const throw();
 	};
 };
 

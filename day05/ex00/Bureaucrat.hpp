@@ -22,17 +22,11 @@ public:
 	void decGrade();
 	class GradeTooHighException : public std::exception
 	{
-		virtual const char *what() const throw()
-		{
-			return "Grade Too High";
-		}
+		virtual const char *what() const throw();
 	};
 	class GradeTooLowException : public std::exception
 	{
-		virtual const char *what() const throw()
-		{
-			return "Grade Too Low";
-		}
+		virtual const char *what() const throw();
 	};
 };
 

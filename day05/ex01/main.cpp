@@ -3,6 +3,8 @@
 
 int main()
 {
+	Form f("m", 55, 55);
+	Form t = f;
 	try
 	{
 		Form ta("ta1", 50, 10);
