@@ -1,17 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/15 17:07:17 by amouhtal          #+#    #+#             */
+/*   Updated: 2021/10/15 17:07:25 by amouhtal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 
 int main()
 {
-	Form f("m", 55, 55);
-	Form t = f;
 	try
 	{
 		Form ta("ta1", 50, 10);
 		Bureaucrat school("school", 55);
-
-		// ta.beSigned(school);
-
 		school.signForm(ta);
 
 	}
@@ -24,9 +31,6 @@ int main()
 	{
 		Form ta("ta1", 50, 10);
 		Bureaucrat school("school", 49);
-
-		// ta.beSigned(school);
-
 		school.signForm(ta);
 
 	}

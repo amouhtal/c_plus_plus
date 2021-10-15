@@ -6,8 +6,8 @@ RobotomyRequestForm::RobotomyRequestForm():Form("", 72, 45)
 	;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target, std::string Name)
-	:	Form(Name, 72, 45), _target(target)
+RobotomyRequestForm::RobotomyRequestForm(std::string target)
+	:	Form("RobotomyRequest", 72, 45), _target(target)
 {
 	;
 }
@@ -40,6 +40,5 @@ void RobotomyRequestForm::Action() const
 	}
 	else
 		std::cout << this->_target << " has been failed "  << std::endl;
-
 
 }

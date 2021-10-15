@@ -7,12 +7,12 @@
 
 int main()
 {
-	log ("---->Tests<----");
+	log("---->Tests<----");
 	try
 	{
 		Intern ahmed;
 		Form *task;
-		task = ahmed.makeForm("RobotMy Request", "Pardon");
+		task = ahmed.makeForm("RobotoMy Request", "Pardon");
 		log(task->getName());
 		delete task;
 	}
@@ -26,7 +26,7 @@ int main()
 		Intern ahmed;
 		Form *task;
 		task = ahmed.makeForm("Shrubbery Creation", "home");
-		//log(task->GetTarget());
+		log(task->getName());
 		delete task;
 	}
 	catch (const std::exception &e)
@@ -34,12 +34,14 @@ int main()
 		std::cerr << e.what() << std::endl;
 	}
 
+
 	try
 	{
 		Intern ahmed;
 		Form *task;
-		task = ahmed.makeForm("RobotMyRequest", "error");
+		task = ahmed.makeForm("RbotMyRequest", "error");
 		log(task->getName());
+		delete task;
 	}
 	catch (const std::exception &e)
 	{

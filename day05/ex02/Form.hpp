@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/15 17:45:51 by amouhtal          #+#    #+#             */
+/*   Updated: 2021/10/15 17:45:52 by amouhtal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FORM_HPP
 #define FORM_HPP
 
@@ -17,7 +29,7 @@ private:
 
 public:
 	Form();
-	~Form();
+	virtual ~Form();
 	Form(std::string name, int sign_grade, int execute_grade);
 	Form(const Form &);
 	Form &operator=(const Form &rhs);

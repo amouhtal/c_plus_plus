@@ -8,8 +8,8 @@ int main()
 {
 	try
 	{
+		Form *n = new ShrubberyCreationForm("home");
 		Bureaucrat b("ana", 140);
-		Form *n = new ShrubberyCreationForm("home", "FormName");
 		b.signForm(*n);
 		b.executeForm(*n);
 	}
@@ -23,7 +23,7 @@ int main()
 	try
 	{
 		Bureaucrat b("ana", 15);
-		Form *n = new RobotomyRequestForm("Robot", "FormName");
+		Form *n = new RobotomyRequestForm("Robot");
 
 		b.signForm(*n);
 		b.executeForm(*n);
@@ -38,7 +38,7 @@ int main()
 	try
 	{
 		Bureaucrat b("ana", 40);
-		Form *n = new PresidentialPardonForm("president", "FormName");
+		Form *n = new PresidentialPardonForm("president");
 
 		b.signForm(*n);
 		b.executeForm(*n);
@@ -52,7 +52,7 @@ int main()
 	try
 	{
 		Bureaucrat b("ana", 149);
-		Form *n = new ShrubberyCreationForm("home", "FormName");
+		Form *n = new ShrubberyCreationForm("home");
 		b.signForm(*n);
 		b.executeForm(*n);
 	}

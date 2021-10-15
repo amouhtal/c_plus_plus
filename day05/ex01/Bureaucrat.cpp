@@ -1,18 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/15 17:06:57 by amouhtal          #+#    #+#             */
+/*   Updated: 2021/10/15 17:06:59 by amouhtal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include "Bureaucrat.hpp"
+
 Bureaucrat::Bureaucrat()
 {
 	;
 }
 
-const char *Bureaucrat::GradeTooHighException::what() const throw()
-{
-	return "Grade Too High";
-}
-
-const char *Bureaucrat::GradeTooLowException::what() const throw()
-{
-	return "Grade Too Low";
-}
 
 std::string Bureaucrat::getName(void) const
 {
@@ -45,6 +50,16 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : Name(name)
 	if (grade > 150)
 		throw GradeTooLowException();
 	Grade = grade;
+}
+
+const char *Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return "Grade Too High";
+}
+
+const char *Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return "Grade Too Low";
 }
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &bureaucrat)

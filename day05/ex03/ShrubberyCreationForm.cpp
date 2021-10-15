@@ -1,12 +1,12 @@
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target, std::string Name)
-	: Form(Name, 145, 137), _target(target)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
+	: Form("Shrubbery", 145, 137), _target(target)
 {
 	;
 }
 
-ShrubberyCreationForm::~ShrubberyCreationForm()
+ShrubberyCreationForm::ShrubberyCreationForm() : Form("Shrubbery", 145, 137)
 {
 	;
 }
@@ -51,4 +51,9 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationF
 const char *ShrubberyCreationForm::FileNotOpenExeception::what() const throw()
 {
 	return "File Not Create";
+}
+
+ShrubberyCreationForm::~ShrubberyCreationForm()
+{
+	;
 }

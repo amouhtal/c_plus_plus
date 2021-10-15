@@ -10,14 +10,16 @@ class Form;
 class Intern
 {
 public:
-	Form *RobotMyRequest(std::string form_name, std::string target);
-	Form *PresidentialPardon(std::string form_name, std::string target);
-	Form *Shrubbery(std::string form_name, std::string target);
-	Form *makeForm(std::string form_name, std::string target);
 	Intern();
 	Intern(const Intern &);
-	Form &operator=(const Form &);
+	Intern &operator=(const Intern &);
 	~Intern();
+
+	Form *RobotMyRequest( std::string target);
+	Form *PresidentialPardon( std::string target);
+	Form *Shrubbery( std::string target);
+	Form *makeForm(std::string form_name, std::string target);
+
 	class UnknownFormExeception : public std::exception
 	{
 		virtual const char *what() const throw();

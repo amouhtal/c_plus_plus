@@ -10,18 +10,11 @@ class RobotomyRequestForm : public Form
 public:
 	RobotomyRequestForm();
 	RobotomyRequestForm(Bureaucrat &);
-	RobotomyRequestForm(std::string target, std::string Name);
+	RobotomyRequestForm(std::string target);
 	~RobotomyRequestForm();
 	RobotomyRequestForm(const RobotomyRequestForm &);
 	RobotomyRequestForm &operator=(const RobotomyRequestForm &);
 	void Action() const;
-	class FileNotOpenExeception : public std::exception
-	{
-		virtual const char *what() const throw()
-		{
-			return "File Not Create";
-		}
-	};
 };
 
 #endif

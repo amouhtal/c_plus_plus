@@ -1,12 +1,12 @@
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm()
+RobotomyRequestForm::RobotomyRequestForm() : 	Form("Roboto", 72, 45)
 {
 	;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target, std::string Name)
-	:	Form(Name, 72, 45), _target(target)
+RobotomyRequestForm::RobotomyRequestForm(std::string target)
+	:	Form("Roboto", 72, 45), _target(target)
 {
 	;
 }
@@ -35,7 +35,6 @@ void RobotomyRequestForm::Action() const
 	}
 	else
 		std::cout << this->_target << " has been failed "  << std::endl;
-
 
 }
 

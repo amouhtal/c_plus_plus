@@ -4,8 +4,12 @@ Form::Form() : Name(""), SignGrade(0), ExecuteGrade(0), _Signed(false)
 {
 	if (SignGrade < 1)
 		throw GradeTooHighException();
-	if (ExecuteGrade > 150)
+	if (SignGrade > 150)
+		throw GradeTooLowException();
+	if (ExecuteGrade < 1)
 		throw GradeTooHighException();
+	if (ExecuteGrade > 150)
+		throw GradeTooLowException();
 }
 
 Form::Form(std::string name, int sign_grade, int execute_grade) : Name(name), SignGrade(sign_grade),
@@ -13,8 +17,12 @@ Form::Form(std::string name, int sign_grade, int execute_grade) : Name(name), Si
 {
 	if (SignGrade < 1)
 		throw GradeTooHighException();
-	if (ExecuteGrade > 150)
+	if (SignGrade > 150)
+		throw GradeTooLowException();
+	if (ExecuteGrade < 1)
 		throw GradeTooHighException();
+	if (ExecuteGrade > 150)
+		throw GradeTooLowException();
 }
 
 Form::Form(const Form &other) : Name(other.Name), SignGrade(other.SignGrade), ExecuteGrade(other.ExecuteGrade)
