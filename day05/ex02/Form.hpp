@@ -6,7 +6,7 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 17:45:51 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/15 17:45:52 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/16 14:35:36 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,24 +43,15 @@ public:
 
 	class GradeTooHighException : public std::exception
 	{
-		virtual const char *what() const throw()
-		{
-			return "Grade Too High";
-		}
+		virtual const char *what() const throw();
 	};
 	class FormNotSignedException : public std::exception
 	{
-		virtual const char *what() const throw()
-		{
-			return "Form Not Signed";
-		}
+		virtual const char *what() const throw();
 	};
 	class GradeTooLowException : public std::exception
 	{
-		virtual const char *what() const throw()
-		{
-			return "Grade Too Low";
-		}
+		virtual const char *what() const throw();
 	};
 };
 

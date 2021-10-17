@@ -17,10 +17,7 @@ public:
 	void Action() const;
 	class FileNotOpenExeception : public std::exception
 	{
-		virtual const char *what() const throw()
-		{
-			return "File Not Create";
-		}
+		virtual const char *what() const throw();
 	};
 };
 

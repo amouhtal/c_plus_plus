@@ -37,6 +37,11 @@ void ShrubberyCreationForm::Action() const
 	ofs.close();
 }
 
+const char * ShrubberyCreationForm::FileNotOpenExeception::what() const throw()
+{
+	return "File Not Create";
+}
+
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &other) : Form(other.getName(), 145, 137)
 {
 	*this = other;

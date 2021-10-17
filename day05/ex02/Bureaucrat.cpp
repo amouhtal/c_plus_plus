@@ -6,18 +6,13 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 17:46:04 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/15 17:46:05 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/16 14:43:48 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
 Bureaucrat::Bureaucrat()
-{
-	;
-}
-
-Bureaucrat::~Bureaucrat()
 {
 	;
 }
@@ -62,17 +57,6 @@ std::ostream &operator<<(std::ostream &out, Bureaucrat &bureaucrat)
 	return out;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &other) : Name(other.Name)
-{
-	*this = other;
-}
-
-Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs)
-{
-	this->Grade = rhs.Grade;
-	return *this;
-}
-
 void Bureaucrat::signForm(Form &form)
 {
 	try
@@ -98,4 +82,30 @@ void Bureaucrat::executeForm(Form const &form)
 	{
 		std::cout << e.what() << std::endl;
 	}
+}
+
+Bureaucrat::Bureaucrat(const Bureaucrat &other) : Name(other.Name)
+{
+	*this = other;
+}
+
+Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs)
+{
+	this->Grade = rhs.Grade;
+	return *this;
+}
+
+const char *Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return "Grade Too High";
+}
+
+const char *Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return "Grade Too Low";
+}
+
+Bureaucrat::~Bureaucrat()
+{
+	;
 }

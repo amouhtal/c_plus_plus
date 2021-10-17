@@ -6,7 +6,7 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 17:07:06 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/15 17:44:21 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/16 18:39:15 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,6 @@
 
 Form::Form() : Name(""), SignGrade(0), ExecuteGrade(0), _Signed(false)
 {
-	if (SignGrade < 1)
-		throw GradeTooHighException();
-	if (SignGrade > 150)
-		throw GradeTooLowException();
-	if (ExecuteGrade < 1)
-		throw GradeTooHighException();
-	if (ExecuteGrade > 150)
-		throw GradeTooLowException();
 }
 
 Form::Form(std::string name, int sign_grade, int execute_grade) : Name(name), SignGrade(sign_grade),
@@ -36,7 +28,6 @@ Form::Form(std::string name, int sign_grade, int execute_grade) : Name(name), Si
 	if (ExecuteGrade > 150)
 		throw GradeTooLowException();
 }
-
 
 Form::Form(const Form &other) : Name(other.Name), SignGrade(other.SignGrade), ExecuteGrade(other.ExecuteGrade)
 {
@@ -56,7 +47,7 @@ int Form::GetSignGrade(void) const
 
 int Form::GetExecuteGrade(void) const
 {
-	return (this->SignGrade);
+	return (this->ExecuteGrade);
 }
 
 bool Form::getSigne(void) const
@@ -92,9 +83,9 @@ Form &Form::operator=(const Form &rhs)
 std::ostream &operator<<(std::ostream &out, const Form &rhs)
 {
 	if (rhs.getSigne())
-		out << "Form is signed\n";
+		out << " Name : " << rhs.getName() << " SigneGrade : " << rhs.GetSignGrade() << " ExecuteGrade : " << rhs.GetExecuteGrade() << " Form is signed\n";
 	else
-		out << "Form is not signed\n";
+		out << " Name : " << rhs.getName() << " SigneGrade : " << rhs.GetSignGrade() << " ExecuteGrade : " << rhs.GetExecuteGrade() << " Form is not signed\n";
 	return out;
 }
 

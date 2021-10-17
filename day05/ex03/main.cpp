@@ -7,19 +7,21 @@
 
 int main()
 {
-	log("---->Tests<----");
+	log("---->Tests 1<----");
 	try
 	{
 		Intern ahmed;
 		Form *task;
 		task = ahmed.makeForm("RobotoMy Request", "Pardon");
 		log(task->getName());
+	
 		delete task;
 	}
 	catch (const std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
+	log("---->Tests 2<----");
 
 	try
 	{
@@ -34,6 +36,7 @@ int main()
 		std::cerr << e.what() << std::endl;
 	}
 
+	log("---->Tests 3<----");
 
 	try
 	{

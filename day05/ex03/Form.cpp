@@ -48,7 +48,7 @@ int Form::GetSignGrade(void) const
 
 int Form::GetExecuteGrade(void) const
 {
-	return (this->SignGrade);
+	return (this->ExecuteGrade);
 }
 
 bool Form::getSigne(void) const
@@ -88,8 +88,16 @@ void Form::execute(Bureaucrat const &executor) const
 		throw GradeTooLowException();
 	Action();
 }
-
+std::ostream &operator<<(std::ostream &out, const Form &rhs)
+{
+	if (rhs.getSigne())
+		out << " Name : " << rhs.getName() << " SigneGrade : " << rhs.GetSignGrade() << " ExecuteGrade : " << rhs.GetExecuteGrade() << " Form is signed\n";
+	else
+		out << " Name : " << rhs.getName() << " SigneGrade : " << rhs.GetSignGrade() << " ExecuteGrade : " << rhs.GetExecuteGrade() << " Form is not signed\n";
+	return out;
+}
 Form::~Form()
 {
 	;
 }
+

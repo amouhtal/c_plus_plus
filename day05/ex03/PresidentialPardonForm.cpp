@@ -1,12 +1,12 @@
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm() : Form("Presidential", 72, 45)
+PresidentialPardonForm::PresidentialPardonForm() : Form("Presidential", 25, 5)
 {
 	;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(std::string target)
-	: Form("Presidential", 72, 45), _target(target)
+	: Form("Presidential", 25, 5), _target(target)
 {
 	;
 }
