@@ -6,7 +6,7 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 17:25:16 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/17 18:59:55 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/18 18:26:27 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define __TYPE_HPP__
 
 # include <iostream>
+# include <cstdlib>
 
 class Type
 {
@@ -26,12 +27,19 @@ private :
 	bool		Tindisponible;
 	std::string type;
 public :
+	std::string GetType() const;
 	Type();
 	void	parsing(std::string &Type);
+	void	SetTypes();
+	void	printTypes()	const;
+	void	printChar()		const;
+	void	printInt()		const;
+	void	printFloat()	const;
+	void	printDouble()	const;
+
 	Type(const Type &);
 	Type &operator=(const Type &);
 	~Type();
 };
-
 
 #endif
