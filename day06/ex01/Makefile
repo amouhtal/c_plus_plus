@@ -1,7 +1,7 @@
-NAME = conversion
+NAME = Serialization
 CC = clang++
 FLAGS = -std=c++98 -Wall -Werror -Wextra
-SRCS = main.cpp type.cpp
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 %.o:%.cpp *.hpp

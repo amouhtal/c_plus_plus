@@ -1,7 +1,7 @@
-NAME = conversion
+NAME = Identify
 CC = clang++
 FLAGS = -std=c++98 -Wall -Werror -Wextra
-SRCS = main.cpp type.cpp
+SRCS = main.cpp Base.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 %.o:%.cpp *.hpp
