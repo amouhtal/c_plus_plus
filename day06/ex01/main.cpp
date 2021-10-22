@@ -24,6 +24,8 @@ int	main()
 	d.x = 5;
 	d.y = 10;
 
+	std::cout << d.x << std::endl;
+	std::cout << d.y << std::endl;
 	raw = serialize(&d);
 
 	Data *d2;

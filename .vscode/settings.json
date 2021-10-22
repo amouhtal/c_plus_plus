@@ -64,6 +64,7 @@
         "__functional_base_03": "cpp",
         "bit": "cpp",
         "deque": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "__memory": "cpp"
     }
 }

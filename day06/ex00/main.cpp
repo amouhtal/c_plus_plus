@@ -18,5 +18,7 @@ int main(int ac, char **av)
 		nb.printTypes();
 		return (0);
 	}
+	else
+		std::cout << "Invalid Type" << std::endl;
 	return (1);
 }

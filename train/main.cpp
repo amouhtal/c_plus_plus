@@ -17,16 +17,9 @@ class D2 : public Base
 
 int main()
 {
-  Base d1;
-
-  D1 *b = dynamic_cast<D1 *>(&d1);
-
-  if (b)
-  {
-    puts("Not NuLL");
-  }
-  else
-    puts("NULL");
+  float f;
+  f = 4.3;
+  printf("%f\n", 4222222.255);
 
   return 0;
 }

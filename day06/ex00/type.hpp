@@ -6,7 +6,7 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 17:25:16 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/20 15:39:24 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/22 17:09:37 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ public :
 	void	parsing(std::string &Type);
 	void	SetTypes( void );
 	void	printTypes( void )	;
-	void	printChar( void )		const;
-	void	printInt( void )		const;
-	void	printFloat( void )	const;
-	void	printDouble( void )	const;
+	void	printChar( void )		;
+	void	printInt( void )		;
+	void	printFloat( void )	;
+	void	printDouble( void )	;
 
 	Type(const Type &);
 	Type &operator=(const Type &);
