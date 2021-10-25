@@ -2,24 +2,29 @@
 
 #include <iostream>
 
-
-template <class T>
-void fun(T var)
+template <typename T>
+void fun(T nbr)
 {
-	std::cout << "from var \n";	
+	std::cout << nbr;
+	std::cout << " main fun\n";
 }
 
-template <>
-void fun(int var)
+template <typename T>
+void fun(int nbr)
 {
-	std::cout << "from var2 \n";	
+	std::cout << nbr;
+	std::cout << " dereved fun\n";
+}
 
+template <typename T>
+void fun()
+{
+	std::cout << " empty fun\n";
 }
 
 int	main()
 {
-	fun< float >(2.6);
-	fun< char >('c');
-	fun(12);
-
+	fun<int>(5);
+	fun<float>(5.2f);
+	fun<double>();
 }

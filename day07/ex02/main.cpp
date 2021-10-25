@@ -1,7 +1,21 @@
-#include <iostream>
-#include <Array.hpp>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/25 18:46:45 by amouhtal          #+#    #+#             */
+/*   Updated: 2021/10/25 18:46:46 by amouhtal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#define MAX_VAL 750
+
+#include <iostream>
+#include "Array.hpp"
+
+#define MAX_VAL 10
+
 int main(int, char **)
 {
 	Array<int> numbers(MAX_VAL);
@@ -43,11 +57,16 @@ int main(int, char **)
 	{
 		std::cerr << e.what() << '\n';
 	}
-
+	
+	for (int i = 0; i < MAX_VAL; i++)
+		numbers[i] = rand();
 	for (int i = 0; i < MAX_VAL; i++)
 	{
-		numbers[i] = rand();
+		std::cout << numbers[i];
+		if (i < MAX_VAL - 1)
+			std::cout << ", ";
 	}
+	std::cout << "\n";
 	delete[] mirror; //
 	return 0;
 }

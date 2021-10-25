@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/10/25 18:06:01 by amouhtal          #+#    #+#              #
-#    Updated: 2021/10/25 18:06:38 by amouhtal         ###   ########.fr        #
+#    Created: 2021/10/25 18:05:55 by amouhtal          #+#    #+#              #
+#    Updated: 2021/10/25 18:06:31 by amouhtal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Iter
+NAME = template
 CC = clang++
 FLAGS = -std=c++98 -Wall -Werror -Wextra
 SRCS = main.cpp
