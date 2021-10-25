@@ -1,9 +1,12 @@
 #include "Base.hpp"
+#include "A.hpp"
+#include "B.hpp"
+#include "C.hpp"
+
 
 Base *generate(void)
 {
 	srand(time(NULL));
-	// Base *ret;
 
 	int randNum;
 	randNum = (rand() % 3);
@@ -49,6 +52,7 @@ void identify(Base *p)
 	{
 		std::cout << "Pointer Type is C" << std::endl;
 	}
+
 }
 
 void identify(Base &p)
@@ -92,15 +96,10 @@ int main()
 {
 	Base *base = generate();
 	Base *base2 = generate();
+
 	std::cout << std::endl;
 	identify(base);
 	identify(*base2);
-
-
-	// A *p = new A();
-
-	// Base *p = new Base();
-
-	// p = dynamic_cast<>
-
+	delete base;
+	delete base2;
 }

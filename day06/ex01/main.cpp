@@ -18,19 +18,21 @@ Data* deserialize(uintptr_t raw)
 
 int	main()
 {
-	Data d;
-	uintptr_t raw;
+	Data *d = new Data();
+	uintptr_t raw ;
 
-	d.x = 5;
-	d.y = 10;
+	d->x = 5;
+	d->y = 10;
 
-	std::cout << d.x << std::endl;
-	std::cout << d.y << std::endl;
-	raw = serialize(&d);
-
+	std::cout << d->x << std::endl;
+	std::cout << d->y << std::endl;
+	raw = serialize(d);
+	std::cout << "serialize function called " << std::endl;
 	Data *d2;
 
 	d2 = deserialize(raw);
 	std::cout << d2->x << std::endl;
 	std::cout << d2->y << std::endl;
+	std::cout << "deserialize function called " << std::endl;
+	delete d;
 }
