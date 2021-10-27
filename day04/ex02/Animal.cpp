@@ -6,7 +6,7 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 13:18:42 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/07 15:38:20 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/27 11:09:32 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 Animal::Animal()
 {
 	log("Animal  default constructor");
+}
+
+void Animal::makeSound( void ) const
+{
+	std::cout << "hello\n";
 }
 
 Animal::Animal(const Animal &other)

@@ -6,7 +6,7 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 18:46:40 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/25 18:46:41 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/27 11:37:45 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ private :
 	unsigned int _lenght;
 
 public :
-	Array<T>(void) : _arr(new T[0]), _lenght(0){};
-	Array<T>(unsigned int n) : _arr(new T[n]), _lenght(n){};
-	Array<T>(Array &other)
+	Array( void ) : _arr(new T[0]), _lenght(0){};
+	Array(unsigned int n) : _arr(new T[n]), _lenght(n){};
+	Array(Array &other)
 	{
 		*this = other;
 	}
@@ -40,19 +40,23 @@ public :
 		}
 		return *this;
 	}
-
+	class OutOfRange : public std::exception
+	{
+		const char *what() const throw(){
+			return "Element out of the range";}
+	};
 	T &operator[](unsigned int pos) const
 	{
-		if (pos < 0 || pos > _lenght)
-			throw std::out_of_range("Element out of the limits");
+		if (pos < 0 || pos >= _lenght)
+			throw (OutOfRange());
 		else
 			return (this->_arr[pos]);
 	};
-	unsigned int size(void) const
+	unsigned int size( void ) const
 	{
 		return (this->_lenght);
 	}
-	~Array<T>()
+	~Array()
 	{
 		delete[] this->_arr;
 	}

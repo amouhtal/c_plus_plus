@@ -6,7 +6,7 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 18:46:29 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/25 18:46:30 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/26 16:28:08 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@
 template<typename T>
 void iter(T *adr, int lenght, void(*fun)(T  ))
 {
-	for (size_t i = 0; i < lenght; i++)
+	for (int i = 0; i < lenght; i++)
 	{
 		fun (adr[i]);
 	}
 }
+
 
 #endif
