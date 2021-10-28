@@ -6,7 +6,7 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 18:46:29 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/26 16:28:08 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/28 18:01:28 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <iostream>
 
 template<typename T>
-void iter(T *adr, int lenght, void(*fun)(T  ))
+void iter(T *adr, int lenght, void(fun)(const T&))
 {
 	for (int i = 0; i < lenght; i++)
 	{
@@ -24,5 +24,10 @@ void iter(T *adr, int lenght, void(*fun)(T  ))
 	}
 }
 
+template <typename T>
+void ft_print(T const &a)
+{
+	std::cout << a << std::endl;
+}
 
 #endif

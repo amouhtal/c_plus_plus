@@ -6,20 +6,21 @@
 /*   By: amouhtal <amouhtal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 18:46:23 by amouhtal          #+#    #+#             */
-/*   Updated: 2021/10/25 18:46:25 by amouhtal         ###   ########.fr       */
+/*   Updated: 2021/10/28 18:02:24 by amouhtal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iter.hpp"
 
-void ft_printf(int a)
-{
-	std::cout << a << std::endl;
-}
-
 int	main()
 {
 	int arr[3] = {4, 5, 6};
 
-	iter(arr, 3, &ft_printf);
+	iter(arr, 3, ft_print);
+
+	std::cout << "----> test 2 <-----" << std::endl;
+
+	char arr2[4] = {'1', '3', '3', '7'};
+
+	iter(arr2, 4, ft_print);
 }
