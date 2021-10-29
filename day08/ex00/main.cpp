@@ -4,7 +4,8 @@ int main()
 {
 	std::list<int> container;
 
-	std::list<int>::iterator it;
+	// std::vector<int> vec;
+
 	container.push_back(5);
 
 	container.push_back(10);

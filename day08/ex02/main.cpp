@@ -1,3 +1,5 @@
+#include "mutantstack.hpp"
+#include <iostream>
 
 int main()
 {
@@ -21,5 +23,6 @@ int main()
 		std::cout << *it << std::endl;
 		++it;
 	}
-	std::stack<int> s(mstack);
-	ret
+	// std::stack<int> s(mstack);
+	return 0;
+}

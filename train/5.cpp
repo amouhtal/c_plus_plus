@@ -3,6 +3,7 @@
 #include <vector>	// for vectors
 using namespace std;
 
+
 int main()
 {
 	vector<int> ar(5);
@@ -14,7 +15,7 @@ int main()
 	ar.push_back(5);
 
 
-
+    
 	// Declaring iterator to a vector
 	vector<int>::iterator ptr;
 
