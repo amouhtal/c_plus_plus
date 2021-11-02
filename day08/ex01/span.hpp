@@ -3,7 +3,8 @@
 
 #include <iostream>
 #include <algorithm>
-#include <vector>
+# include <list>
+# include <vector>
 
 class Span
 {
@@ -19,9 +20,24 @@ class Span
 				return ("Full container");
 			}
 		};
+		class NotEnoughNumbers : public std::exception
+		{
+			const char *what() const throw(){
+				return ("Not Enough Numbers");
+			}
+		};
 		void addNumber(int number);
-		int shortestSpan();
+
+		template<typename T>
+		void	addNumber(T f, T s){
+			size_t dis = std::distance(f, s);
+			if (dis + _Numbers.size() <= _N)
+				_Numbers.insert(_Numbers.end(), f, s);
+			else
+				throw FullContainer();
+		};
 		int longestSpan();
+		int shortestSpan();
 		~Span();
 };
 

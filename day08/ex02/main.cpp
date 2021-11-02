@@ -18,7 +18,6 @@ int main()
 	mstack.push(3);
 	mstack.push(5);
 	mstack.push(737);
-	//[...]
 	mstack.push(0);
 	_MutantStack::iterator it = mstack.begin();
 	_MutantStack::iterator ite = mstack.end();
@@ -43,7 +42,20 @@ int main()
 
 	_MutantStack::const_reverse_iterator const crit = mstack.rbegin() ;
 	_MutantStack::const_reverse_iterator const crite = mstack.rend();
+	(void)crit;
+	(void)crite;
+	
 	std::stack<int, std::list<int> > s(mstack);
 
+	MutantStack<int, std::list<int> > ss(mstack);
+	std::cout << "------------\n";
+	int value;
+	while (!ss.empty())
+	{
+		value = ss.top() ;
+		std::cout << value << std::endl;
+		ss.pop();
+	}
+	
 	return 0;
 }

@@ -1,4 +1,4 @@
-# include "span.hpp"
+#include "span.hpp"
 
 int main()
 {
@@ -8,16 +8,47 @@ int main()
 	sp.addNumber(17);
 	sp.addNumber(9);
 	sp.addNumber(11);
-	std::cout << sp.shortestSpan() << std::endl;
-	std::cout << sp.longestSpan() << std::endl;
+
+	try
+	{
+		std::cout << sp.shortestSpan() << std::endl;
+		std::cout << sp.longestSpan() << std::endl;
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
+	std::cout << "----------Test2----------" << std::endl;
 
 	Span sp2 = Span(1000);
 
-	srand(time(NULL));
-	for (size_t i = 0; i < 1000; i++)
+	try
 	{
-		sp2.addNumber(i);
+		for (size_t i = 0; i < 500; i++)
+		{
+			sp2.addNumber(i);
+		}
 	}
-	std::cout << sp2.shortestSpan() << std::endl;
-	std::cout << sp2.longestSpan() << std::endl;
+	catch (const std::exception &e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
+	std::vector<int> vect;
+
+	for (size_t i = 500; i < 1000; i++)
+	{
+		vect.push_back(i);
+	}
+	try
+	{
+		sp2.addNumber(vect.begin(), vect.end());
+		std::cout << sp2.shortestSpan() << std::endl;
+		std::cout << sp2.longestSpan() << std::endl;
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << e.what() << '\n';
+	}
 }

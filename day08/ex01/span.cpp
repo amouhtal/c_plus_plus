@@ -12,57 +12,36 @@ Span::Span(unsigned int N) : _N(N)
 
 void Span::addNumber(int number)
 {
+	if (_Numbers.size() == _N)
+		throw FullContainer();
 	_Numbers.push_back(number);
 }
 
 int Span::longestSpan()
 {
-	int bigest;
-	int smallest;
-
-	bigest = _Numbers[0];
-	smallest = _Numbers[0];
-	for (unsigned int i = 0; i < _N; i++)
-	{
-		if (i < _N - 1)
-		{
-			if (_Numbers[i + 1] > bigest)
-			{
-				bigest = _Numbers[i + 1];
-			}
-			if (_Numbers[i + 1] < smallest)
-			{
-				smallest = _Numbers[i + 1];
-			}
-		}
-	}
-	return (bigest - smallest);
+	if (_Numbers.size() <= 1)
+		throw NotEnoughNumbers();
+	else
+		return (*std::max_element(_Numbers.begin(), _Numbers.end()) - *std::min_element(_Numbers.begin(), _Numbers.end()) );
 }
 
 int Span::shortestSpan()
 {
-	int shorte1;
-	int shorte2;
-	int temp;
+	int diff;
 
+	if (_Numbers.size() <= 1)
+		throw NotEnoughNumbers();
 	std::vector<int> sort = _Numbers;
-	std::vector<int>::iterator ptr;
-
-	if (sort.size() >= 2)
+	std::sort(sort.begin(), sort.end());
+	diff = sort[1] - sort[0];
+	for (unsigned int i = 1; i < _N - 1; i++)
 	{
-		std::sort(sort.begin(), sort.end());
-		temp = sort[1] - sort[0];
-		for (unsigned int i = 1; i < _N - 1; i++)
-		{
-			// std::cout << sort[i + 1] - sort[i] << std::endl;
-			if (temp > (sort[i + 1] - sort[i]))
-				temp = sort[i + 1] - sort[i];
-		}
+		if (diff > (sort[i + 1] - sort[i]))
+			diff = sort[i + 1] - sort[i];
 	}
-	return (temp);
+	return (diff);
 }
 
 Span::~Span()
 {
-
 }

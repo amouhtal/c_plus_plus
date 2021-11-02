@@ -4,8 +4,6 @@ int main()
 {
 	std::list<int> container;
 
-	// std::vector<int> vec;
-
 	container.push_back(5);
 
 	container.push_back(10);
@@ -13,17 +11,17 @@ int main()
 	container.push_back(0);
 	container.push_back(-8);
 
-	if (easyfind(container, 0))
+	if (easyFind(container, 0))
 		std::cout << "value exist" << std::endl;
 	else
 		std::cout << "value not exist" << std::endl;
 
-	if (easyfind(container, 4))
+	if (easyFind(container, 4))
 		std::cout << "value exist" << std::endl;
 	else
 		std::cout << "value not exist" << std::endl;
 
-	if (easyfind(container, 10))
+	if (easyFind(container, 10))
 		std::cout << "value exist" << std::endl;
 	else
 		std::cout << "value not exist" << std::endl;
